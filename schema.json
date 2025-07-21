@@ -10,7 +10,7 @@
 						"null"
 					],
 					"description": "True if TOMRA is active, otherwise false.",
-					"default": false,
+					"default": true,
 					"additionalProperties": {
     "type": "number"
   }
