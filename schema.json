@@ -10,7 +10,10 @@
 						"null"
 					],
 					"description": "True if TOMRA is active, otherwise false.",
-					"default": false
+					"default": false,
+					"additionalProperties": {
+    "type": "number"
+  }
 				},
 				"Prefix": {
 					"type": "string",
