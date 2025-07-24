@@ -6,29 +6,29 @@
       "properties" : {
         "Active" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : false
         },
         "Prefix" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "981"
         },
         "StoreId" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "ProductNumber" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "RefundEnabled" : {
           "type" : [ "boolean", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "IgnoreStoreId" : {
           "type" : [ "boolean", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         }
       },
       "description" : "Tomra settings."
@@ -52,17 +52,17 @@
       "properties" : {
         "Sales" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 0
         },
         "Cash" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 0
         },
         "Closure" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 0
         }
       },
@@ -409,30 +409,30 @@
       "properties" : {
         "OpenCashDrawerMode" : {
           "$ref" : "#/$defs/openCashDrawerMode",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 3
         },
         "DieboldSmBusCashDrawer" : {
           "$ref" : "#/$defs/dieboldSmBusCashDrawerConfiguration",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "InitialDenominations" : {
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "type" : "array",
           "items" : {
             "type" : "object",
             "properties" : {
               "Value" : {
                 "type" : [ "number", "null" ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "Count" : {
                 "type" : [ "integer", "null" ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "DenominationType" : {
                 "enum" : [ "Banknote", "Coin", null ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               }
             },
             "description" : "Cash audit nominal model."
@@ -456,11 +456,11 @@
       "properties" : {
         "ConnectionString" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "OpenTelemetryEnabled" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : false
         }
       },
@@ -530,7 +530,7 @@
       "properties" : {
         "Volume" : {
           "$ref" : "#/$defs/number",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 100
         }
       },
@@ -541,7 +541,7 @@
       "properties" : {
         "UpdateManifestFilePath" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "C:\\Datapac\\Update\\posybe2manifest.json"
         }
       },
@@ -592,12 +592,12 @@
       "properties" : {
         "NotifyFrom" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "23:30:00"
         },
         "NotifyTo" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "23:50:00"
         }
       },
@@ -608,60 +608,60 @@
       "properties" : {
         "CustomerAgeRestriction" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : true
         },
         "EmployeeAgeRestriction" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : true
         },
         "AutomaticClosureHour" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : 1
         },
         "RecordForeignCurrency" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : true
         },
         "ValidateCancellation" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : false
         },
         "ScheduledSellPriceChangeIntervalSeconds" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : 60
         },
         "InvoiceRequiredAmount" : {
           "type" : [ "number", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "MaxCashMovementAmount" : {
           "type" : [ "number", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "ShowLoyaltyRestrictionsInfoDialogs" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : true
         },
         "AllowedManualDiscountWithLoyaltyCard" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : false
         },
         "PrimaryForeignCurrency" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "EUR"
         },
         "HighRiskItemControl" : {
           "$ref" : "#/$defs/highRiskItemControl",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 1
         }
       },
@@ -672,7 +672,7 @@
       "properties" : {
         "AfterUpdateMessageFileName" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         }
       },
       "description" : "Settings for after update message behaviour."
@@ -697,31 +697,31 @@
       "properties" : {
         "MaxConcurrency" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : 1
         },
         "JobSchedules" : {
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "type" : "object",
           "additionalProperties" : {
             "type" : "object",
             "properties" : {
               "CronExpression" : {
                 "type" : "string",
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
               },
               "IsEnabled" : {
                 "type" : "boolean",
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
                 "default" : true
               },
               "RetentionPeriodInDays" : {
                 "type" : [ "integer", "null" ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "SynchronizationCountLimit" : {
                 "type" : [ "integer", "null" ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               }
             },
             "description" : "Store config parameters of a job."
@@ -734,7 +734,7 @@
       "type" : "object",
       "properties" : {
         "BarcodeScannerService" : {
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : 0,
           "enum" : [ "UWP", "ZebraSDK", "Keyboard" ]
         }
@@ -746,17 +746,17 @@
       "properties" : {
         "CacheDuration" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "24:00:00"
         },
         "MaxMemoryCacheCount" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 20
         },
         "RetryCount" : {
           "type" : "integer",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 1
         }
       },
@@ -767,17 +767,17 @@
       "properties" : {
         "Type" : {
           "$ref" : "#/$defs/cancellationType",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : 0
         },
         "CancellationTimeToleration" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "00:10:00"
         },
         "IgnoreOriginalFiscalCode" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : false
         }
       },
@@ -793,15 +793,15 @@
             "properties" : {
               "Name" : {
                 "type" : [ "string", "null" ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "Value" : {
                 "$ref" : "#/$defs/number",
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "IsPercentDiscount" : {
                 "type" : "boolean",
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
                 "default" : true
               },
               "OPP" : {
@@ -809,19 +809,19 @@
                 "properties" : {
                   "ManualTriggerType" : {
                     "type" : [ "string", "null" ],
-                    "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                    "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
                   },
                   "ManualTriggerValue" : {
                     "type" : [ "string", "null" ],
-                    "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                    "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
                   }
                 },
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               }
             },
             "description" : "Discount information."
           },
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "Basket" : {
           "type" : [ "array", "null" ],
@@ -830,15 +830,15 @@
             "properties" : {
               "Name" : {
                 "type" : [ "string", "null" ],
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "Value" : {
                 "$ref" : "#/$defs/number",
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               },
               "IsPercentDiscount" : {
                 "type" : "boolean",
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
                 "default" : true
               },
               "OPP" : {
@@ -846,19 +846,19 @@
                 "properties" : {
                   "ManualTriggerType" : {
                     "type" : [ "string", "null" ],
-                    "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                    "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
                   },
                   "ManualTriggerValue" : {
                     "type" : [ "string", "null" ],
-                    "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                    "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
                   }
                 },
-                "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+                "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
               }
             },
             "description" : "Discount information."
           },
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         }
       },
       "description" : "Available discount in pos."
@@ -868,22 +868,22 @@
       "properties" : {
         "VerifyFarmerBaseUrl" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "https://beta.edavki.durs.si/ReceptionistService"
         },
         "ProviderTaxPayerId" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "88362264"
         },
         "ProviderSecret" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "LZIq0CAukqAPbZ+B++McqI8JhWiUuNPPCBU9YvHKv1TQGYFk8I41F673Awe3MTZLNmJywfD0WdM="
         },
         "ProductNumber" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |",
           "default" : "666"
         }
       },
@@ -1008,7 +1008,7 @@
       "properties" : {
         "RootUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         }
       },
       "description" : "Customer external api settings."
@@ -1018,23 +1018,23 @@
       "properties" : {
         "BaseUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "Username" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "Password" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "CustomerIdentifier" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         },
         "LocationCodeMappingCode" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         }
       },
       "description" : "Confguration for SAP stock level service."
@@ -1073,19 +1073,19 @@
       "properties" : {
         "KeycloakHost" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         },
         "KeycloakClientId" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         },
         "KeycloakClientSecret" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         },
         "KeycloakRealm" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         }
       },
       "description" : "Keycloak settings."
@@ -1095,22 +1095,22 @@
       "properties" : {
         "ShowFullScreen" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : true
         },
         "ShowKeyboard" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : true
         },
         "CanShutdown" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : true
         },
         "DisableSplashscreen" : {
           "type" : "boolean",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : true
         }
       },
@@ -1121,25 +1121,25 @@
       "properties" : {
         "DefaultLanguage" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : "en"
         },
         "LocalCacheDir" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n",
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |",
           "default" : "C:\\Datapac\\Pos\\LocalCache"
         },
         "PlatformBaseUrl" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         },
         "CustomerDisplayPath" : {
           "type" : [ "string", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         },
         "ApiPort" : {
           "type" : [ "integer", "null" ],
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Restart` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Restart` |"
         }
       },
       "description" : "Application settings."
@@ -1202,7 +1202,7 @@
       "properties" : {
         "Address" : {
           "type" : "string",
-          "description" : "| test | test2 |\n|------|-------|\n| **Change type** | `Automatic` |\n"
+          "description" : "| test | test2 |\n| ---- | ----- |\n| **Change type** | `Automatic` |"
         }
       },
       "description" : "Diebold SM bus cash drawer configuration."
