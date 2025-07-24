@@ -6,29 +6,29 @@
       "properties" : {
         "Active" : {
           "type" : "boolean",
-          "description" : "True if TOMRA is active, otherwise false.\r\n- **Change type**: `Automatic`.",
+          "description" : "True if TOMRA is active, otherwise false. \n\n - **Change type**: `Automatic`",
           "default" : false
         },
         "Prefix" : {
           "type" : "string",
-          "description" : "TOMRA prefix.\r\n- **Change type**: `Automatic`.",
+          "description" : "TOMRA prefix. \n\n - **Change type**: `Automatic`",
           "default" : "981"
         },
         "StoreId" : {
           "type" : "string",
-          "description" : "TOMRA store id.\r\n- **Change type**: `Automatic`."
+          "description" : "TOMRA store id. \n\n - **Change type**: `Automatic`"
         },
         "ProductNumber" : {
           "type" : "string",
-          "description" : "TOMRA product number.\r\n- **Change type**: `Automatic`."
+          "description" : "TOMRA product number. \n\n - **Change type**: `Automatic`"
         },
         "RefundEnabled" : {
           "type" : [ "boolean", "null" ],
-          "description" : "True if TOMRA refund is available, otherwise false.\r\n- **Change type**: `Automatic`."
+          "description" : "True if TOMRA refund is available, otherwise false. \n\n - **Change type**: `Automatic`"
         },
         "IgnoreStoreId" : {
           "type" : [ "boolean", "null" ],
-          "description" : "True if TOMRA store id should be ignored, otherwise false.\r\n- **Change type**: `Automatic`."
+          "description" : "True if TOMRA store id should be ignored, otherwise false. \n\n - **Change type**: `Automatic`"
         }
       },
       "description" : "Tomra settings."
@@ -52,17 +52,17 @@
       "properties" : {
         "Sales" : {
           "type" : "integer",
-          "description" : "Sales recovery Id.\r\n- **Change type**: `Automatic`.",
+          "description" : "Sales recovery Id. \n\n - **Change type**: `Automatic`",
           "default" : 0
         },
         "Cash" : {
           "type" : "integer",
-          "description" : "Cash recovery Id.\r\n- **Change type**: `Automatic`.",
+          "description" : "Cash recovery Id. \n\n - **Change type**: `Automatic`",
           "default" : 0
         },
         "Closure" : {
           "type" : "integer",
-          "description" : "Closure recovery Id.\r\n- **Change type**: `Automatic`.",
+          "description" : "Closure recovery Id. \n\n - **Change type**: `Automatic`",
           "default" : 0
         }
       },
@@ -409,30 +409,30 @@
       "properties" : {
         "OpenCashDrawerMode" : {
           "$ref" : "#/$defs/openCashDrawerMode",
-          "description" : "Open cash drawer mode.\r\n- **Change type**: `Automatic`.",
+          "description" : "Open cash drawer mode. \n\n - **Change type**: `Automatic`",
           "default" : 3
         },
         "DieboldSmBusCashDrawer" : {
           "$ref" : "#/$defs/dieboldSmBusCashDrawerConfiguration",
-          "description" : "Diebold SM bus cash drawer configuration.\r\n- **Change type**: `Automatic`."
+          "description" : "Diebold SM bus cash drawer configuration. \n\n - **Change type**: `Automatic`"
         },
         "InitialDenominations" : {
-          "description" : "Initial denomination.\r\n- **Change type**: `Automatic`.",
+          "description" : "Initial denomination. \n\n - **Change type**: `Automatic`",
           "type" : "array",
           "items" : {
             "type" : "object",
             "properties" : {
               "Value" : {
                 "type" : [ "number", "null" ],
-                "description" : "Value of nominal for audit.\r\n- **Change type**: `Automatic`."
+                "description" : "Value of nominal for audit. \n\n - **Change type**: `Automatic`"
               },
               "Count" : {
                 "type" : [ "integer", "null" ],
-                "description" : "Count of nominal for audit.\r\n- **Change type**: `Automatic`."
+                "description" : "Count of nominal for audit. \n\n - **Change type**: `Automatic`"
               },
               "DenominationType" : {
                 "enum" : [ "Banknote", "Coin", null ],
-                "description" : "Denomination type.\r\n- **Change type**: `Automatic`."
+                "description" : "Denomination type. \n\n - **Change type**: `Automatic`"
               }
             },
             "description" : "Cash audit nominal model."
@@ -456,11 +456,11 @@
       "properties" : {
         "ConnectionString" : {
           "type" : "string",
-          "description" : "Encrypted connection string for telemetry.\r\n- **Change type**: `Automatic`."
+          "description" : "Encrypted connection string for telemetry. \n\n - **Change type**: `Automatic`"
         },
         "OpenTelemetryEnabled" : {
           "type" : "boolean",
-          "description" : "True if telemetry enabled, otherwise false for disabled.\r\n- **Change type**: `Automatic`.",
+          "description" : "True if telemetry enabled, otherwise false for disabled. \n\n - **Change type**: `Automatic`",
           "default" : false
         }
       },
@@ -530,7 +530,7 @@
       "properties" : {
         "Volume" : {
           "$ref" : "#/$defs/number",
-          "description" : "Volume configuration.\r\n- **Change type**: `Automatic`.",
+          "description" : "Volume configuration. \n\n - **Change type**: `Automatic`",
           "default" : 100
         }
       },
@@ -541,7 +541,7 @@
       "properties" : {
         "UpdateManifestFilePath" : {
           "type" : "string",
-          "description" : "Full path to the update manifest file.\r\n- **Change type**: `Automatic`.",
+          "description" : "Full path to the update manifest file. \n\n - **Change type**: `Automatic`",
           "default" : "C:\\Datapac\\Update\\posybe2manifest.json"
         }
       },
@@ -592,12 +592,12 @@
       "properties" : {
         "NotifyFrom" : {
           "type" : "string",
-          "description" : "Specify time when to display notification about parked transactions.\r\n- **Change type**: `Automatic`.",
+          "description" : "Specify time when to display notification about parked transactions. \n\n - **Change type**: `Automatic`",
           "default" : "23:30:00"
         },
         "NotifyTo" : {
           "type" : "string",
-          "description" : "Specify time when to disable sale when there are parked transactions.\r\n- **Change type**: `Automatic`.",
+          "description" : "Specify time when to disable sale when there are parked transactions. \n\n - **Change type**: `Automatic`",
           "default" : "23:50:00"
         }
       },
@@ -608,60 +608,60 @@
       "properties" : {
         "CustomerAgeRestriction" : {
           "type" : "boolean",
-          "description" : "Customer age restriction.\r\n- **Change type**: `Automatic`.",
+          "description" : "Customer age restriction. \n\n - **Change type**: `Automatic`",
           "default" : true
         },
         "EmployeeAgeRestriction" : {
           "type" : "boolean",
-          "description" : "Employee age restriction.\r\n- **Change type**: `Automatic`.",
+          "description" : "Employee age restriction. \n\n - **Change type**: `Automatic`",
           "default" : true
         },
         "AutomaticClosureHour" : {
           "type" : "integer",
-          "description" : "Automatic closure hour.\r\n- **Change type**: `Restart`.",
+          "description" : "Automatic closure hour. \n\n - **Change type**: `Restart`",
           "default" : 1
         },
         "RecordForeignCurrency" : {
           "type" : "boolean",
-          "description" : "True if foreign currency cash movements should be used.\r\n- **Change type**: `Automatic`.",
+          "description" : "True if foreign currency cash movements should be used. \n\n - **Change type**: `Automatic`",
           "default" : true
         },
         "ValidateCancellation" : {
           "type" : "boolean",
-          "description" : "Indicates if AuthorizeCancelltion claim should be checked.\r\n- **Change type**: `Automatic`.",
+          "description" : "Indicates if AuthorizeCancelltion claim should be checked. \n\n - **Change type**: `Automatic`",
           "default" : false
         },
         "ScheduledSellPriceChangeIntervalSeconds" : {
           "type" : "integer",
-          "description" : "Interval for check scheduled sell price changes in seconds.\r\n- **Change type**: `Restart`.",
+          "description" : "Interval for check scheduled sell price changes in seconds. \n\n - **Change type**: `Restart`",
           "default" : 60
         },
         "InvoiceRequiredAmount" : {
           "type" : [ "number", "null" ],
-          "description" : "Amount above which invoice is required.\r\n- **Change type**: `Automatic`."
+          "description" : "Amount above which invoice is required. \n\n - **Change type**: `Automatic`"
         },
         "MaxCashMovementAmount" : {
           "type" : [ "number", "null" ],
-          "description" : "Max CashMovement amount, for deposit or withdrawal.\r\n- **Change type**: `Automatic`."
+          "description" : "Max CashMovement amount, for deposit or withdrawal. \n\n - **Change type**: `Automatic`"
         },
         "ShowLoyaltyRestrictionsInfoDialogs" : {
           "type" : "boolean",
-          "description" : "Indicates if loyalty restrictions information dialogs should be shown to cashier before payment.\r\n- **Change type**: `Automatic`.",
+          "description" : "Indicates if loyalty restrictions information dialogs should be shown to cashier before payment. \n\n - **Change type**: `Automatic`",
           "default" : true
         },
         "AllowedManualDiscountWithLoyaltyCard" : {
           "type" : "boolean",
-          "description" : "Allowed manual discount with loyalty card.\r\n- **Change type**: `Automatic`.",
+          "description" : "Allowed manual discount with loyalty card. \n\n - **Change type**: `Automatic`",
           "default" : false
         },
         "PrimaryForeignCurrency" : {
           "type" : "string",
-          "description" : "Primary foreign currency.\r\n- **Change type**: `Automatic`.",
+          "description" : "Primary foreign currency. \n\n - **Change type**: `Automatic`",
           "default" : "EUR"
         },
         "HighRiskItemControl" : {
           "$ref" : "#/$defs/highRiskItemControl",
-          "description" : "High-risk item control.\r\n- **Change type**: `Automatic`.",
+          "description" : "High-risk item control. \n\n - **Change type**: `Automatic`",
           "default" : 1
         }
       },
@@ -672,7 +672,7 @@
       "properties" : {
         "AfterUpdateMessageFileName" : {
           "type" : [ "string", "null" ],
-          "description" : "Message which can be displayed on login after successful update.\r\n- **Change type**: `Automatic`."
+          "description" : "Message which can be displayed on login after successful update. \n\n - **Change type**: `Automatic`"
         }
       },
       "description" : "Settings for after update message behaviour."
@@ -697,31 +697,31 @@
       "properties" : {
         "MaxConcurrency" : {
           "type" : "integer",
-          "description" : "Max concurrency for background jobs.\r\n- **Change type**: `Restart`.",
+          "description" : "Max concurrency for background jobs. \n\n - **Change type**: `Restart`",
           "default" : 1
         },
         "JobSchedules" : {
-          "description" : "Dictionary storing parameters for every background job.\r\n- **Change type**: `Restart`.",
+          "description" : "Dictionary storing parameters for every background job. \n\n - **Change type**: `Restart`",
           "type" : "object",
           "additionalProperties" : {
             "type" : "object",
             "properties" : {
               "CronExpression" : {
                 "type" : "string",
-                "description" : "Represents time interval of job. See www.cronmaker.com\r\n- **Change type**: `Restart`."
+                "description" : "Represents time interval of job. See www.cronmaker.com \n\n - **Change type**: `Restart`"
               },
               "IsEnabled" : {
                 "type" : "boolean",
-                "description" : "True if job is enabled.\r\n- **Change type**: `Restart`.",
+                "description" : "True if job is enabled. \n\n - **Change type**: `Restart`",
                 "default" : true
               },
               "RetentionPeriodInDays" : {
                 "type" : [ "integer", "null" ],
-                "description" : "Number of days to retain data before deletion.\r\n- **Change type**: `Automatic`."
+                "description" : "Number of days to retain data before deletion. \n\n - **Change type**: `Automatic`"
               },
               "SynchronizationCountLimit" : {
                 "type" : [ "integer", "null" ],
-                "description" : "Max cycle count for synchronization.\r\n- **Change type**: `Automatic`."
+                "description" : "Max cycle count for synchronization. \n\n - **Change type**: `Automatic`"
               }
             },
             "description" : "Store config parameters of a job."
@@ -734,7 +734,7 @@
       "type" : "object",
       "properties" : {
         "BarcodeScannerService" : {
-          "description" : "Representing type of BarcodeScenner service.\r\n- **Change type**: `Restart`.",
+          "description" : "Representing type of BarcodeScenner service. \n\n - **Change type**: `Restart`",
           "default" : 0,
           "enum" : [ "UWP", "ZebraSDK", "Keyboard" ]
         }
@@ -746,17 +746,17 @@
       "properties" : {
         "CacheDuration" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "Life duration of every cache entry.\r\n- **Change type**: `Automatic`.",
+          "description" : "Life duration of every cache entry. \n\n - **Change type**: `Automatic`",
           "default" : "24:00:00"
         },
         "MaxMemoryCacheCount" : {
           "type" : "integer",
-          "description" : "Max in-memory item storage count\r\n- **Change type**: `Automatic`.",
+          "description" : "Max in-memory item storage count \n\n - **Change type**: `Automatic`",
           "default" : 20
         },
         "RetryCount" : {
           "type" : "integer",
-          "description" : "Number of retries trying to ensure the file is cached.\r\n- **Change type**: `Automatic`.",
+          "description" : "Number of retries trying to ensure the file is cached. \n\n - **Change type**: `Automatic`",
           "default" : 1
         }
       },
@@ -767,17 +767,17 @@
       "properties" : {
         "Type" : {
           "$ref" : "#/$defs/cancellationType",
-          "description" : "Cancellation type.\r\n- **Change type**: `Automatic`.",
+          "description" : "Cancellation type. \n\n - **Change type**: `Automatic`",
           "default" : 0
         },
         "CancellationTimeToleration" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "In case the POS is offline, only those sales transaction can be cancelled, that has been not craeted back in time later than this trashold.\r\n- **Change type**: `Automatic`.",
+          "description" : "In case the POS is offline, only those sales transaction can be cancelled, that has been not craeted back in time later than this trashold. \n\n - **Change type**: `Automatic`",
           "default" : "00:10:00"
         },
         "IgnoreOriginalFiscalCode" : {
           "type" : "boolean",
-          "description" : "In case of cancellation of returnable packages, ask for original fiscal registration code.\r\n- **Change type**: `Automatic`.",
+          "description" : "In case of cancellation of returnable packages, ask for original fiscal registration code. \n\n - **Change type**: `Automatic`",
           "default" : false
         }
       },
@@ -793,15 +793,15 @@
             "properties" : {
               "Name" : {
                 "type" : [ "string", "null" ],
-                "description" : "Visible name of discount.\r\n- **Change type**: `Automatic`."
+                "description" : "Visible name of discount. \n\n - **Change type**: `Automatic`"
               },
               "Value" : {
                 "$ref" : "#/$defs/number",
-                "description" : "Value of discount, percent or price.\r\n- **Change type**: `Automatic`."
+                "description" : "Value of discount, percent or price. \n\n - **Change type**: `Automatic`"
               },
               "IsPercentDiscount" : {
                 "type" : "boolean",
-                "description" : "True if percent discount type, otherwise false.\r\n- **Change type**: `Automatic`.",
+                "description" : "True if percent discount type, otherwise false. \n\n - **Change type**: `Automatic`",
                 "default" : true
               },
               "OPP" : {
@@ -809,19 +809,19 @@
                 "properties" : {
                   "ManualTriggerType" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger type.\r\n- **Change type**: `Automatic`."
+                    "description" : "Manual trigger type. \n\n - **Change type**: `Automatic`"
                   },
                   "ManualTriggerValue" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger value.\r\n- **Change type**: `Automatic`."
+                    "description" : "Manual trigger value. \n\n - **Change type**: `Automatic`"
                   }
                 },
-                "description" : "Information for OPP reward.\r\n- **Change type**: `Automatic`."
+                "description" : "Information for OPP reward. \n\n - **Change type**: `Automatic`"
               }
             },
             "description" : "Discount information."
           },
-          "description" : "Array of available discount for row.\r\n- **Change type**: `Automatic`."
+          "description" : "Array of available discount for row. \n\n - **Change type**: `Automatic`"
         },
         "Basket" : {
           "type" : [ "array", "null" ],
@@ -830,15 +830,15 @@
             "properties" : {
               "Name" : {
                 "type" : [ "string", "null" ],
-                "description" : "Visible name of discount.\r\n- **Change type**: `Automatic`."
+                "description" : "Visible name of discount. \n\n - **Change type**: `Automatic`"
               },
               "Value" : {
                 "$ref" : "#/$defs/number",
-                "description" : "Value of discount, percent or price.\r\n- **Change type**: `Automatic`."
+                "description" : "Value of discount, percent or price. \n\n - **Change type**: `Automatic`"
               },
               "IsPercentDiscount" : {
                 "type" : "boolean",
-                "description" : "True if percent discount type, otherwise false.\r\n- **Change type**: `Automatic`.",
+                "description" : "True if percent discount type, otherwise false. \n\n - **Change type**: `Automatic`",
                 "default" : true
               },
               "OPP" : {
@@ -846,19 +846,19 @@
                 "properties" : {
                   "ManualTriggerType" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger type.\r\n- **Change type**: `Automatic`."
+                    "description" : "Manual trigger type. \n\n - **Change type**: `Automatic`"
                   },
                   "ManualTriggerValue" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger value.\r\n- **Change type**: `Automatic`."
+                    "description" : "Manual trigger value. \n\n - **Change type**: `Automatic`"
                   }
                 },
-                "description" : "Information for OPP reward.\r\n- **Change type**: `Automatic`."
+                "description" : "Information for OPP reward. \n\n - **Change type**: `Automatic`"
               }
             },
             "description" : "Discount information."
           },
-          "description" : "Array of available discount for basket.\r\n- **Change type**: `Automatic`."
+          "description" : "Array of available discount for basket. \n\n - **Change type**: `Automatic`"
         }
       },
       "description" : "Available discount in pos."
@@ -868,22 +868,22 @@
       "properties" : {
         "VerifyFarmerBaseUrl" : {
           "type" : "string",
-          "description" : "Heating oil settings.\r\n- **Change type**: `Automatic`.",
+          "description" : "Heating oil settings. \n\n - **Change type**: `Automatic`",
           "default" : "https://beta.edavki.durs.si/ReceptionistService"
         },
         "ProviderTaxPayerId" : {
           "type" : "string",
-          "description" : "Provider tax payer ID.\r\n- **Change type**: `Automatic`.",
+          "description" : "Provider tax payer ID. \n\n - **Change type**: `Automatic`",
           "default" : "88362264"
         },
         "ProviderSecret" : {
           "type" : "string",
-          "description" : "Provider secret authentication code.\r\n- **Change type**: `Automatic`.",
+          "description" : "Provider secret authentication code. \n\n - **Change type**: `Automatic`",
           "default" : "LZIq0CAukqAPbZ+B++McqI8JhWiUuNPPCBU9YvHKv1TQGYFk8I41F673Awe3MTZLNmJywfD0WdM="
         },
         "ProductNumber" : {
           "type" : "string",
-          "description" : "Heating oil product number.\r\n- **Change type**: `Automatic`.",
+          "description" : "Heating oil product number. \n\n - **Change type**: `Automatic`",
           "default" : "666"
         }
       },
@@ -1008,7 +1008,7 @@
       "properties" : {
         "RootUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "Root url.\r\n- **Change type**: `Automatic`."
+          "description" : "Root url. \n\n - **Change type**: `Automatic`"
         }
       },
       "description" : "Customer external api settings."
@@ -1018,23 +1018,23 @@
       "properties" : {
         "BaseUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "Base url for service.\r\n- **Change type**: `Automatic`."
+          "description" : "Base url for service. \n\n - **Change type**: `Automatic`"
         },
         "Username" : {
           "type" : [ "string", "null" ],
-          "description" : "Username for service.\r\n- **Change type**: `Automatic`."
+          "description" : "Username for service. \n\n - **Change type**: `Automatic`"
         },
         "Password" : {
           "type" : [ "string", "null" ],
-          "description" : "Password for service.\r\n- **Change type**: `Automatic`."
+          "description" : "Password for service. \n\n - **Change type**: `Automatic`"
         },
         "CustomerIdentifier" : {
           "type" : [ "string", "null" ],
-          "description" : "SAP customer identifier.\r\n- **Change type**: `Automatic`."
+          "description" : "SAP customer identifier. \n\n - **Change type**: `Automatic`"
         },
         "LocationCodeMappingCode" : {
           "type" : [ "string", "null" ],
-          "description" : "Mapping key for location.\r\n- **Change type**: `Automatic`."
+          "description" : "Mapping key for location. \n\n - **Change type**: `Automatic`"
         }
       },
       "description" : "Confguration for SAP stock level service."
@@ -1073,19 +1073,19 @@
       "properties" : {
         "KeycloakHost" : {
           "type" : "string",
-          "description" : "Host Url.\r\n- **Change type**: `Restart`."
+          "description" : "Host Url. \n\n - **Change type**: `Restart`"
         },
         "KeycloakClientId" : {
           "type" : "string",
-          "description" : "Client Id.\r\n- **Change type**: `Restart`."
+          "description" : "Client Id. \n\n - **Change type**: `Restart`"
         },
         "KeycloakClientSecret" : {
           "type" : "string",
-          "description" : "Client secret.\r\n- **Change type**: `Restart`."
+          "description" : "Client secret. \n\n - **Change type**: `Restart`"
         },
         "KeycloakRealm" : {
           "type" : "string",
-          "description" : "Realm.\r\n- **Change type**: `Restart`."
+          "description" : "Realm. \n\n - **Change type**: `Restart`"
         }
       },
       "description" : "Keycloak settings."
@@ -1095,22 +1095,22 @@
       "properties" : {
         "ShowFullScreen" : {
           "type" : "boolean",
-          "description" : "Start application in fullscreen mode.\r\n- **Change type**: `Restart`.",
+          "description" : "Start application in fullscreen mode. \n\n - **Change type**: `Restart`",
           "default" : true
         },
         "ShowKeyboard" : {
           "type" : "boolean",
-          "description" : "Show keyboard setting.\r\n- **Change type**: `Restart`.",
+          "description" : "Show keyboard setting. \n\n - **Change type**: `Restart`",
           "default" : true
         },
         "CanShutdown" : {
           "type" : "boolean",
-          "description" : "Can access to StartShutDown methods.\r\n- **Change type**: `Restart`.",
+          "description" : "Can access to StartShutDown methods. \n\n - **Change type**: `Restart`",
           "default" : true
         },
         "DisableSplashscreen" : {
           "type" : "boolean",
-          "description" : "Disable splash screen.\r\n- **Change type**: `Restart`.",
+          "description" : "Disable splash screen. \n\n - **Change type**: `Restart`",
           "default" : true
         }
       },
@@ -1121,25 +1121,25 @@
       "properties" : {
         "DefaultLanguage" : {
           "type" : "string",
-          "description" : "Default application language. It will be used for registration or when merchant language is missing.\r\n- **Change type**: `Restart`.",
+          "description" : "Default application language. It will be used for registration or when merchant language is missing. \n\n - **Change type**: `Restart`",
           "default" : "en"
         },
         "LocalCacheDir" : {
           "type" : "string",
-          "description" : "Default path for local cache directory.\r\n- **Change type**: `Restart`.",
+          "description" : "Default path for local cache directory. \n\n - **Change type**: `Restart`",
           "default" : "C:\\Datapac\\Pos\\LocalCache"
         },
         "PlatformBaseUrl" : {
           "type" : "string",
-          "description" : "Base platform URL.\r\n- **Change type**: `Restart`."
+          "description" : "Base platform URL. \n\n - **Change type**: `Restart`"
         },
         "CustomerDisplayPath" : {
           "type" : [ "string", "null" ],
-          "description" : "Path to the customer display EXE file. If empty or path does not exists, customer display won't be managed by application.\r\n- **Change type**: `Restart`."
+          "description" : "Path to the customer display EXE file. If empty or path does not exists, customer display won't be managed by application. \n\n - **Change type**: `Restart`"
         },
         "ApiPort" : {
           "type" : [ "integer", "null" ],
-          "description" : "Api port for open communication with applicaiton.\r\n- **Change type**: `Restart`."
+          "description" : "Api port for open communication with applicaiton. \n\n - **Change type**: `Restart`"
         }
       },
       "description" : "Application settings."
@@ -1202,7 +1202,7 @@
       "properties" : {
         "Address" : {
           "type" : "string",
-          "description" : "Cash drawer address.\r\n- **Change type**: `Automatic`."
+          "description" : "Cash drawer address. \n\n - **Change type**: `Automatic`"
         }
       },
       "description" : "Diebold SM bus cash drawer configuration."
