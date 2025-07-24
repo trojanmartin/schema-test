@@ -6,32 +6,32 @@
       "properties" : {
         "Active" : {
           "type" : "boolean",
-          "description" : "True if TOMRA is active, otherwise false.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "True if TOMRA is active, otherwise false.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : false
         },
         "Prefix" : {
           "type" : "string",
-          "description" : "TOMRA prefix.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "TOMRA prefix.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : "981"
         },
         "StoreId" : {
           "type" : "string",
-          "description" : "TOMRA store id.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "TOMRA store id.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "ProductNumber" : {
           "type" : "string",
-          "description" : "TOMRA product number.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "TOMRA product number.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "RefundEnabled" : {
           "type" : [ "boolean", "null" ],
-          "description" : "True if TOMRA refund is available, otherwise false.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinSCO``"
+          "description" : "True if TOMRA refund is available, otherwise false.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinSCO``"
         },
         "IgnoreStoreId" : {
           "type" : [ "boolean", "null" ],
-          "description" : "True if TOMRA store id should be ignored, otherwise false.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "True if TOMRA store id should be ignored, otherwise false.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         }
       },
-      "description" : "Tomra settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Tomra settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "ForecourtConfiguration" : {
       "type" : "object",
@@ -52,21 +52,21 @@
       "properties" : {
         "Sales" : {
           "type" : "integer",
-          "description" : "Sales recovery Id.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Sales recovery Id.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 0
         },
         "Cash" : {
           "type" : "integer",
-          "description" : "Cash recovery Id.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Cash recovery Id.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 0
         },
         "Closure" : {
           "type" : "integer",
-          "description" : "Closure recovery Id.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Closure recovery Id.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 0
         }
       },
-      "description" : "Recovery settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Recovery settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "EventBus" : {
       "type" : "object",
@@ -409,37 +409,37 @@
       "properties" : {
         "OpenCashDrawerMode" : {
           "$ref" : "#/$defs/openCashDrawerMode",
-          "description" : "Open cash drawer mode.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Open cash drawer mode.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : 3
         },
         "DieboldSmBusCashDrawer" : {
           "$ref" : "#/$defs/dieboldSmBusCashDrawerConfiguration",
-          "description" : "Diebold SM bus cash drawer configuration.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Diebold SM bus cash drawer configuration.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "InitialDenominations" : {
-          "description" : "Initial denomination.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Initial denomination.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "type" : "array",
           "items" : {
             "type" : "object",
             "properties" : {
               "Value" : {
                 "type" : [ "number", "null" ],
-                "description" : "Value of nominal for audit.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Value of nominal for audit.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               },
               "Count" : {
                 "type" : [ "integer", "null" ],
-                "description" : "Count of nominal for audit.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Count of nominal for audit.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               },
               "DenominationType" : {
                 "enum" : [ "Banknote", "Coin", null ],
-                "description" : "Denomination type.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Denomination type.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               }
             },
-            "description" : "Cash audit nominal model.\n - **Used By Applications:** \n   - `WinPOS``"
+            "description" : "Cash audit nominal model.\n- **Used By Applications:**\n   - `WinPOS``"
           }
         }
       },
-      "description" : "Cash drawer configuration.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Cash drawer configuration.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "PlatformSettings" : {
       "type" : "object",
@@ -456,15 +456,15 @@
       "properties" : {
         "ConnectionString" : {
           "type" : "string",
-          "description" : "Encrypted connection string for telemetry.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Encrypted connection string for telemetry.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "OpenTelemetryEnabled" : {
           "type" : "boolean",
-          "description" : "True if telemetry enabled, otherwise false for disabled.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "True if telemetry enabled, otherwise false for disabled.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : false
         }
       },
-      "description" : "Telemetry settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Telemetry settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "SiteControllerConfiguration" : {
       "type" : "object",
@@ -530,22 +530,22 @@
       "properties" : {
         "Volume" : {
           "$ref" : "#/$defs/number",
-          "description" : "Volume configuration.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Volume configuration.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : 100
         }
       },
-      "description" : "POS sound configuration.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "POS sound configuration.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "UpdatesConfiguration" : {
       "type" : "object",
       "properties" : {
         "UpdateManifestFilePath" : {
           "type" : "string",
-          "description" : "Full path to the update manifest file.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Full path to the update manifest file.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : "C:\\Datapac\\Update\\posybe2manifest.json"
         }
       },
-      "description" : "Application updates configuration.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Application updates configuration.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "DispensersGridConfiguration" : {
       "type" : "object",
@@ -592,90 +592,90 @@
       "properties" : {
         "NotifyFrom" : {
           "type" : "string",
-          "description" : "Specify time when to display notification about parked transactions.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Specify time when to display notification about parked transactions.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "23:30:00"
         },
         "NotifyTo" : {
           "type" : "string",
-          "description" : "Specify time when to disable sale when there are parked transactions.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Specify time when to disable sale when there are parked transactions.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "23:50:00"
         }
       },
-      "description" : "POS transaction parking configuration.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "POS transaction parking configuration.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "BusinessSettings" : {
       "type" : "object",
       "properties" : {
         "CustomerAgeRestriction" : {
           "type" : "boolean",
-          "description" : "Customer age restriction.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Customer age restriction.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : true
         },
         "EmployeeAgeRestriction" : {
           "type" : "boolean",
-          "description" : "Employee age restriction.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Employee age restriction.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : true
         },
         "AutomaticClosureHour" : {
           "type" : "integer",
-          "description" : "Automatic closure hour.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Automatic closure hour.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 1
         },
         "RecordForeignCurrency" : {
           "type" : "boolean",
-          "description" : "True if foreign currency cash movements should be used.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "True if foreign currency cash movements should be used.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : true
         },
         "ValidateCancellation" : {
           "type" : "boolean",
-          "description" : "Indicates if AuthorizeCancelltion claim should be checked.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Indicates if AuthorizeCancelltion claim should be checked.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : false
         },
         "ScheduledSellPriceChangeIntervalSeconds" : {
           "type" : "integer",
-          "description" : "Interval for check scheduled sell price changes in seconds.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Interval for check scheduled sell price changes in seconds.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 60
         },
         "InvoiceRequiredAmount" : {
           "type" : [ "number", "null" ],
-          "description" : "Amount above which invoice is required.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Amount above which invoice is required.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "MaxCashMovementAmount" : {
           "type" : [ "number", "null" ],
-          "description" : "Max CashMovement amount, for deposit or withdrawal.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Max CashMovement amount, for deposit or withdrawal.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "ShowLoyaltyRestrictionsInfoDialogs" : {
           "type" : "boolean",
-          "description" : "Indicates if loyalty restrictions information dialogs should be shown to cashier before payment.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Indicates if loyalty restrictions information dialogs should be shown to cashier before payment.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : true
         },
         "AllowedManualDiscountWithLoyaltyCard" : {
           "type" : "boolean",
-          "description" : "Allowed manual discount with loyalty card.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Allowed manual discount with loyalty card.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : false
         },
         "PrimaryForeignCurrency" : {
           "type" : "string",
-          "description" : "Primary foreign currency.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Primary foreign currency.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : "EUR"
         },
         "HighRiskItemControl" : {
           "$ref" : "#/$defs/highRiskItemControl",
-          "description" : "High-risk item control.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "High-risk item control.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 1
         }
       },
-      "description" : "Business settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Business settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "UpdateMessageSettings" : {
       "type" : "object",
       "properties" : {
         "AfterUpdateMessageFileName" : {
           "type" : [ "string", "null" ],
-          "description" : "Message which can be displayed on login after successful update.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Message which can be displayed on login after successful update.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         }
       },
-      "description" : "Settings for after update message behaviour.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Settings for after update message behaviour.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "MolGroupPartnerCardSettings" : {
       "type" : "object",
@@ -697,91 +697,91 @@
       "properties" : {
         "MaxConcurrency" : {
           "type" : "integer",
-          "description" : "Max concurrency for background jobs.\n - **Recommended config level**: `Location`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Max concurrency for background jobs.\n- **Recommended config level**: `Location`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : 1
         },
         "JobSchedules" : {
-          "description" : "Dictionary storing parameters for every background job.\n - **Recommended config level**: `Location`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Dictionary storing parameters for every background job.\n- **Recommended config level**: `Location`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "type" : "object",
           "additionalProperties" : {
             "type" : "object",
             "properties" : {
               "CronExpression" : {
                 "type" : "string",
-                "description" : "Represents time interval of job. See www.cronmaker.com\n - **Recommended config level**: `Location`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+                "description" : "Represents time interval of job. See www.cronmaker.com\n- **Recommended config level**: `Location`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
               },
               "IsEnabled" : {
                 "type" : "boolean",
-                "description" : "True if job is enabled.\n - **Recommended config level**: `Location`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+                "description" : "True if job is enabled.\n- **Recommended config level**: `Location`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
                 "default" : true
               },
               "RetentionPeriodInDays" : {
                 "type" : [ "integer", "null" ],
-                "description" : "Number of days to retain data before deletion.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+                "description" : "Number of days to retain data before deletion.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
               },
               "SynchronizationCountLimit" : {
                 "type" : [ "integer", "null" ],
-                "description" : "Max cycle count for synchronization.\n - **Recommended config level**: `Location`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+                "description" : "Max cycle count for synchronization.\n- **Recommended config level**: `Location`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
               }
             },
             "description" : "Store config parameters of a job."
           }
         }
       },
-      "description" : "Settings of background jobs.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Settings of background jobs.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "Peripherals" : {
       "type" : "object",
       "properties" : {
         "BarcodeScannerService" : {
-          "description" : "Representing type of BarcodeScenner service.\n - **Recommended config level**: `Application`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinOPT``",
+          "description" : "Representing type of BarcodeScenner service.\n- **Recommended config level**: `Application`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinOPT``",
           "default" : 0,
           "enum" : [ "UWP", "ZebraSDK", "Keyboard" ]
         }
       },
-      "description" : "Peripheral settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinOPT``"
+      "description" : "Peripheral settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinOPT``"
     },
     "ImageCacheSettings" : {
       "type" : "object",
       "properties" : {
         "CacheDuration" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "Life duration of every cache entry.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Life duration of every cache entry.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "24:00:00"
         },
         "MaxMemoryCacheCount" : {
           "type" : "integer",
-          "description" : "Max in-memory item storage count\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Max in-memory item storage count\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : 20
         },
         "RetryCount" : {
           "type" : "integer",
-          "description" : "Number of retries trying to ensure the file is cached.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Number of retries trying to ensure the file is cached.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : 1
         }
       },
-      "description" : "Image cache settings.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Image cache settings.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "CancellationOptions" : {
       "type" : "object",
       "properties" : {
         "Type" : {
           "$ref" : "#/$defs/cancellationType",
-          "description" : "Cancellation type.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Cancellation type.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : 0
         },
         "CancellationTimeToleration" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "In case the POS is offline, only those sales transaction can be cancelled, that has been not craeted back in time later than this trashold.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "In case the POS is offline, only those sales transaction can be cancelled, that has been not craeted back in time later than this trashold.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "00:10:00"
         },
         "IgnoreOriginalFiscalCode" : {
           "type" : "boolean",
-          "description" : "In case of cancellation of returnable packages, ask for original fiscal registration code.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "In case of cancellation of returnable packages, ask for original fiscal registration code.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : false
         }
       },
-      "description" : "Cancellation options settings.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Cancellation options settings.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "AvailableDiscounts" : {
       "type" : [ "object", "null" ],
@@ -793,15 +793,15 @@
             "properties" : {
               "Name" : {
                 "type" : [ "string", "null" ],
-                "description" : "Visible name of discount.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Visible name of discount.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               },
               "Value" : {
                 "$ref" : "#/$defs/number",
-                "description" : "Value of discount, percent or price.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Value of discount, percent or price.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               },
               "IsPercentDiscount" : {
                 "type" : "boolean",
-                "description" : "True if percent discount type, otherwise false.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+                "description" : "True if percent discount type, otherwise false.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
                 "default" : true
               },
               "OPP" : {
@@ -809,19 +809,19 @@
                 "properties" : {
                   "ManualTriggerType" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger type.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                    "description" : "Manual trigger type.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
                   },
                   "ManualTriggerValue" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger value.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                    "description" : "Manual trigger value.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
                   }
                 },
-                "description" : "Information for OPP reward.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Information for OPP reward.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               }
             },
-            "description" : "Discount information.\n - **Used By Applications:** \n   - `WinPOS``"
+            "description" : "Discount information.\n- **Used By Applications:**\n   - `WinPOS``"
           },
-          "description" : "Array of available discount for row.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Array of available discount for row.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "Basket" : {
           "type" : [ "array", "null" ],
@@ -830,15 +830,15 @@
             "properties" : {
               "Name" : {
                 "type" : [ "string", "null" ],
-                "description" : "Visible name of discount.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Visible name of discount.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               },
               "Value" : {
                 "$ref" : "#/$defs/number",
-                "description" : "Value of discount, percent or price.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Value of discount, percent or price.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               },
               "IsPercentDiscount" : {
                 "type" : "boolean",
-                "description" : "True if percent discount type, otherwise false.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+                "description" : "True if percent discount type, otherwise false.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
                 "default" : true
               },
               "OPP" : {
@@ -846,116 +846,116 @@
                 "properties" : {
                   "ManualTriggerType" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger type.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                    "description" : "Manual trigger type.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
                   },
                   "ManualTriggerValue" : {
                     "type" : [ "string", "null" ],
-                    "description" : "Manual trigger value.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                    "description" : "Manual trigger value.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
                   }
                 },
-                "description" : "Information for OPP reward.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+                "description" : "Information for OPP reward.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
               }
             },
-            "description" : "Discount information.\n - **Used By Applications:** \n   - `WinPOS``"
+            "description" : "Discount information.\n- **Used By Applications:**\n   - `WinPOS``"
           },
-          "description" : "Array of available discount for basket.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Array of available discount for basket.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         }
       },
-      "description" : "Available discount in pos.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Available discount in pos.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "HeatingOilSettings" : {
       "type" : [ "object", "null" ],
       "properties" : {
         "VerifyFarmerBaseUrl" : {
           "type" : "string",
-          "description" : "Heating oil settings.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Heating oil settings.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "https://beta.edavki.durs.si/ReceptionistService"
         },
         "ProviderTaxPayerId" : {
           "type" : "string",
-          "description" : "Provider tax payer ID.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Provider tax payer ID.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "88362264"
         },
         "ProviderSecret" : {
           "type" : "string",
-          "description" : "Provider secret authentication code.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Provider secret authentication code.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "LZIq0CAukqAPbZ+B++McqI8JhWiUuNPPCBU9YvHKv1TQGYFk8I41F673Awe3MTZLNmJywfD0WdM="
         },
         "ProductNumber" : {
           "type" : "string",
-          "description" : "Heating oil product number.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Heating oil product number.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "666"
         }
       },
-      "description" : "Heating oil settings.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Heating oil settings.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "OppCloudSettings" : {
       "type" : [ "object", "null" ],
       "properties" : {
         "MasterDataSourceSystemID" : {
           "type" : [ "string", "null" ],
-          "description" : "Master data source system Id.\n - **Recommended config level**: `Merchant`"
+          "description" : "Master data source system Id.\n- **Recommended config level**: `Merchant`"
         },
         "ApiUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "Api url of OPP Cloud.\n - **Recommended config level**: `Merchant`"
+          "description" : "Api url of OPP Cloud.\n- **Recommended config level**: `Merchant`"
         },
         "TokenUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "Token url for get new token.\n - **Recommended config level**: `Merchant`"
+          "description" : "Token url for get new token.\n- **Recommended config level**: `Merchant`"
         },
         "ClientId" : {
           "type" : [ "string", "null" ],
-          "description" : "Client Id.\n - **Recommended config level**: `Merchant`"
+          "description" : "Client Id.\n- **Recommended config level**: `Merchant`"
         },
         "ClientSecret" : {
           "type" : [ "string", "null" ],
-          "description" : "Client secret.\n - **Recommended config level**: `Merchant`"
+          "description" : "Client secret.\n- **Recommended config level**: `Merchant`"
         },
         "GrantType" : {
           "type" : "string",
-          "description" : "Grant type.\n - **Recommended config level**: `Merchant`",
+          "description" : "Grant type.\n- **Recommended config level**: `Merchant`",
           "default" : "client_credentials"
         },
         "RequestTimeot" : {
           "$ref" : "#/$defs/timeSpan",
-          "description" : "Request timeout.\n - **Recommended config level**: `Merchant`",
+          "description" : "Request timeout.\n- **Recommended config level**: `Merchant`",
           "default" : "00:00:05"
         },
         "LoyaltyMappingExternalCode" : {
           "type" : [ "string", "null" ],
-          "description" : "Loyalty mapping external code.\n - **Recommended config level**: `Merchant`"
+          "description" : "Loyalty mapping external code.\n- **Recommended config level**: `Merchant`"
         },
         "MeasurementUnitMappingCode" : {
           "type" : [ "string", "null" ],
-          "description" : "MeasurementUnit mapping code.\n - **Recommended config level**: `Merchant`"
+          "description" : "MeasurementUnit mapping code.\n- **Recommended config level**: `Merchant`"
         },
         "LocationCodeMappingCode" : {
           "type" : [ "string", "null" ],
-          "description" : "Location codemapping code.\n - **Recommended config level**: `Merchant`"
+          "description" : "Location codemapping code.\n- **Recommended config level**: `Merchant`"
         },
         "QuantityDecimals" : {
           "type" : [ "string", "null" ],
-          "description" : "Quantity decimals.\n - **Recommended config level**: `Merchant`"
+          "description" : "Quantity decimals.\n- **Recommended config level**: `Merchant`"
         },
         "ProcessCoupons" : {
           "type" : "boolean",
-          "description" : "True if also process coupons.\n - **Recommended config level**: `Merchant`",
+          "description" : "True if also process coupons.\n- **Recommended config level**: `Merchant`",
           "default" : false
         },
         "ProcessDiscounts" : {
           "type" : "boolean",
-          "description" : "True if also process discounts.\n - **Recommended config level**: `Merchant`",
+          "description" : "True if also process discounts.\n- **Recommended config level**: `Merchant`",
           "default" : false
         },
         "CustomerLoyaltyDiscountsForbidden" : {
           "type" : "boolean",
-          "description" : "True if it is forbidden to provide discount, when customer is identified.\n - **Recommended config level**: `Merchant`",
+          "description" : "True if it is forbidden to provide discount, when customer is identified.\n- **Recommended config level**: `Merchant`",
           "default" : false
         },
         "ProcessAutomaticManualPromotions" : {
           "type" : "boolean",
-          "description" : "True if also process automatic manual promotions.\n - **Recommended config level**: `Merchant`",
+          "description" : "True if also process automatic manual promotions.\n- **Recommended config level**: `Merchant`",
           "default" : false
         },
         "AutomaticManualPromotions" : {
@@ -965,40 +965,40 @@
             "properties" : {
               "Description" : {
                 "type" : [ "string", "null" ],
-                "description" : "Descritpion of promotion.\n - **Recommended config level**: `Merchant`"
+                "description" : "Descritpion of promotion.\n- **Recommended config level**: `Merchant`"
               },
               "Articles" : {
                 "$ref" : "#/$defs/arrayOfString",
-                "description" : "Article numbers.\n - **Recommended config level**: `Merchant`"
+                "description" : "Article numbers.\n- **Recommended config level**: `Merchant`"
               },
               "OPP" : {
                 "$ref" : "#/$defs/promotion",
-                "description" : "Promotion definition.\n - **Recommended config level**: `Merchant`"
+                "description" : "Promotion definition.\n- **Recommended config level**: `Merchant`"
               }
             },
             "description" : "Automatic defined promotion."
           },
-          "description" : "List of Automatic defined promotion.\n - **Recommended config level**: `Merchant`"
+          "description" : "List of Automatic defined promotion.\n- **Recommended config level**: `Merchant`"
         },
         "Proxy" : {
           "type" : [ "object", "null" ],
           "properties" : {
             "Address" : {
               "type" : [ "string", "null" ],
-              "description" : "Base adress of proxy server.\n - **Recommended config level**: `Merchant`"
+              "description" : "Base adress of proxy server.\n- **Recommended config level**: `Merchant`"
             },
             "BypassProxyOnLocal" : {
               "type" : "boolean",
-              "description" : "True if bypass proxy.\n - **Recommended config level**: `Merchant`",
+              "description" : "True if bypass proxy.\n- **Recommended config level**: `Merchant`",
               "default" : true
             },
             "UseDefaultCredentials" : {
               "type" : "boolean",
-              "description" : "Use default cretendials.\n - **Recommended config level**: `Merchant`",
+              "description" : "Use default cretendials.\n- **Recommended config level**: `Merchant`",
               "default" : false
             }
           },
-          "description" : "Proxy configuration.\n - **Recommended config level**: `Merchant`"
+          "description" : "Proxy configuration.\n- **Recommended config level**: `Merchant`"
         }
       },
       "description" : "Opp cloud settings."
@@ -1008,36 +1008,36 @@
       "properties" : {
         "RootUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "Root url.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Root url.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         }
       },
-      "description" : "Customer external api settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Customer external api settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "SapStockLevelSettings" : {
       "type" : [ "object", "null" ],
       "properties" : {
         "BaseUrl" : {
           "type" : [ "string", "null" ],
-          "description" : "Base url for service.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Base url for service.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "Username" : {
           "type" : [ "string", "null" ],
-          "description" : "Username for service.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Username for service.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "Password" : {
           "type" : [ "string", "null" ],
-          "description" : "Password for service.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Password for service.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "CustomerIdentifier" : {
           "type" : [ "string", "null" ],
-          "description" : "SAP customer identifier.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "SAP customer identifier.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "LocationCodeMappingCode" : {
           "type" : [ "string", "null" ],
-          "description" : "Mapping key for location.\n - **Recommended config level**: `Merchant`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Mapping key for location.\n- **Recommended config level**: `Merchant`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         }
       },
-      "description" : "Confguration for SAP stock level service.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Confguration for SAP stock level service.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "SixpayPaymentOptions" : {
       "type" : [ "object", "null" ],
@@ -1073,76 +1073,76 @@
       "properties" : {
         "KeycloakHost" : {
           "type" : "string",
-          "description" : "Host Url.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Host Url.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "KeycloakClientId" : {
           "type" : "string",
-          "description" : "Client Id.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Client Id.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "KeycloakClientSecret" : {
           "type" : "string",
-          "description" : "Client secret.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Client secret.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "KeycloakRealm" : {
           "type" : "string",
-          "description" : "Realm.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Realm.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         }
       },
-      "description" : "Keycloak settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Keycloak settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     },
     "AutomationSettings" : {
       "type" : "object",
       "properties" : {
         "ShowFullScreen" : {
           "type" : "boolean",
-          "description" : "Start application in fullscreen mode.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Start application in fullscreen mode.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : true
         },
         "ShowKeyboard" : {
           "type" : "boolean",
-          "description" : "Show keyboard setting.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Show keyboard setting.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : true
         },
         "CanShutdown" : {
           "type" : "boolean",
-          "description" : "Can access to StartShutDown methods.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Can access to StartShutDown methods.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : true
         },
         "DisableSplashscreen" : {
           "type" : "boolean",
-          "description" : "Disable splash screen.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Disable splash screen.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : true
         }
       },
-      "description" : "Setting for automation testings.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Setting for automation testings.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "AppSettings" : {
       "type" : "object",
       "properties" : {
         "DefaultLanguage" : {
           "type" : "string",
-          "description" : "Default application language. It will be used for registration or when merchant language is missing.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
+          "description" : "Default application language. It will be used for registration or when merchant language is missing.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``",
           "default" : "en"
         },
         "LocalCacheDir" : {
           "type" : "string",
-          "description" : "Default path for local cache directory.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS``",
+          "description" : "Default path for local cache directory.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS``",
           "default" : "C:\\Datapac\\Pos\\LocalCache"
         },
         "PlatformBaseUrl" : {
           "type" : "string",
-          "description" : "Base platform URL.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+          "description" : "Base platform URL.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
         },
         "CustomerDisplayPath" : {
           "type" : [ "string", "null" ],
-          "description" : "Path to the customer display EXE file. If empty or path does not exists, customer display won't be managed by application.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Path to the customer display EXE file. If empty or path does not exists, customer display won't be managed by application.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS``"
         },
         "ApiPort" : {
           "type" : [ "integer", "null" ],
-          "description" : "Api port for open communication with applicaiton.\n - **Recommended config level**: `Appsettings`\n - **Change type**: `Restart`\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinOPT``"
+          "description" : "Api port for open communication with applicaiton.\n- **Recommended config level**: `Appsettings`\n- **Change type**: `Restart`\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinOPT``"
         }
       },
-      "description" : "Application settings.\n - **Used By Applications:** \n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
+      "description" : "Application settings.\n- **Used By Applications:**\n   - `WinPOS`\n   - `WinSCO`\n   - `WinOPT``"
     }
   },
   "$defs" : {
@@ -1202,10 +1202,10 @@
       "properties" : {
         "Address" : {
           "type" : "string",
-          "description" : "Cash drawer address.\n - **Recommended config level**: `Application`\n - **Change type**: `Automatic`\n - **Used By Applications:** \n   - `WinPOS``"
+          "description" : "Cash drawer address.\n- **Recommended config level**: `Application`\n- **Change type**: `Automatic`\n- **Used By Applications:**\n   - `WinPOS``"
         }
       },
-      "description" : "Diebold SM bus cash drawer configuration.\n - **Used By Applications:** \n   - `WinPOS``"
+      "description" : "Diebold SM bus cash drawer configuration.\n- **Used By Applications:**\n   - `WinPOS``"
     },
     "iReadOnlyDictionaryOfStringAndString" : {
       "type" : "array",
@@ -1236,19 +1236,19 @@
       "properties" : {
         "ManualTriggerType" : {
           "type" : [ "string", "null" ],
-          "description" : "Manual trigger type.\n - **Recommended config level**: `Merchant`"
+          "description" : "Manual trigger type.\n- **Recommended config level**: `Merchant`"
         },
         "ManualTriggerValue" : {
           "type" : [ "string", "null" ],
-          "description" : "Manual trigger value.\n - **Recommended config level**: `Merchant`"
+          "description" : "Manual trigger value.\n- **Recommended config level**: `Merchant`"
         },
         "PrivilegeType" : {
           "type" : [ "string", "null" ],
-          "description" : "Privilege type.\n - **Recommended config level**: `Merchant`"
+          "description" : "Privilege type.\n- **Recommended config level**: `Merchant`"
         },
         "PrivilegeValue" : {
           "type" : [ "number", "null" ],
-          "description" : "Privilege value.\n - **Recommended config level**: `Merchant`"
+          "description" : "Privilege value.\n- **Recommended config level**: `Merchant`"
         }
       },
       "description" : "Promition definition."
