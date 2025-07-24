@@ -1145,7 +1145,7 @@
       "description" : "Application settings.\n \n**Used by apps**: `WinPOS`,`WinSCO`,`WinOPT`\n"
     }
   },
-  "description" : "Describes the configuration for the WindowsPOS, SCO, OPT, including settings for various modules and features\n \n \n \n-Recommended config level defines the level where parameter is SHOULD be defined.\n \n   -`System`: System level – applies to **all merchants** and the **entire system**.\n \n   -`Merchant`: Merchant level – applies to a **single registered merchant**.\n \n   -`Location`: Location level – applies to **all applications** at a specific location.\n \n   -`Application`: Application level – applies to the **current application only**.\n \n  -`Appsettings`: Appsettings – value is read from **`appsettings.json`**.\n \n",
+  "description" : "Describes the configuration for the WindowsPOS, SCO, OPT, including settings for various modules and features\n \n \n \n-Recommended config level defines the level where parameter is SHOULD be defined.\n \n   - `System`: System level – applies to **all merchants** and the **entire system**.\n \n   - `Merchant`: Merchant level – applies to a **single registered merchant**.\n \n   - `Location`: Location level – applies to **all applications** at a specific location.\n \n   - `Application`: Application level – applies to the **current application only**.\n \n  - `Appsettings`: Appsettings – value is read from **`appsettings.json`**.\n \n",
   "$defs" : {
     "doubleVatEnum" : {
       "enum" : [ "Default", "Takeaway", "Inhouse", "AskOnce", "AskEverytime" ],
