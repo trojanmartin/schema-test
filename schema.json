@@ -460,7 +460,7 @@
 					}
 				}
 			},
-			"description": "Definition for closure proces.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
+			"description": "Definition for closure process.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
 		},
 		"DiscountConfiguration": {
 			"type": "object",
@@ -906,17 +906,17 @@
 			"properties": {
 				"CacheDuration": {
 					"$ref": "#/$defs/timeSpan",
-					"description": "Life duration of every cache entry.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"description": "Life duration of every cache entry.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n",
 					"default": "24:00:00"
 				},
 				"MaxMemoryCacheCount": {
 					"type": "integer",
-					"description": "Max in-memory item storage count\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"description": "Max in-memory item storage count\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n",
 					"default": 20
 				},
 				"RetryCount": {
 					"type": "integer",
-					"description": "Number of retries trying to ensure the file is cached.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"description": "Number of retries trying to ensure the file is cached.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n",
 					"default": 1
 				}
 			},
@@ -1371,6 +1371,111 @@
 			},
 			"description": "Pos settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
 		},
+		"SmtpConfiguration": {
+			"type": "object",
+			"properties": {
+				"Server": {
+					"type": "string",
+					"description": "SMTP server address.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"Port": {
+					"type": "integer",
+					"description": "SMTP server port.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": 587
+				},
+				"Username": {
+					"type": "string",
+					"description": "SMTP username.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"Password": {
+					"type": "string",
+					"description": "Encrypted SMTP password.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"FromEmail": {
+					"type": "string",
+					"description": "Email address from which the emails will be sent.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"Timeout": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Send timeout.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": "00:00:05"
+				}
+			},
+			"description": "Configuration for SMTP settings used for sending emails.\n \n*Used by apps:* `WinOPT`\n"
+		},
+		"AlertNotifications": {
+			"type": "object",
+			"properties": {
+				"Enabled": {
+					"type": "boolean",
+					"description": "Indicates if alert notifications are enabled.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"Recipients": {
+					"$ref": "#/$defs/arrayOfString",
+					"description": "List of recipient email addresses for alert notifications.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"AlertsSettings": {
+					"description": "Alerts notification settings for different types of alerts.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"type": "array",
+					"items": {
+						"enum": [
+							"PrinterLowPaper",
+							"PrinterNoPaper",
+							"PrinterError"
+						],
+						"description": "Enumeration for alert notification types."
+					}
+				}
+			},
+			"description": "Represents the configuration settings for alert notifications in the cloud.\n \n*Used by apps:* `WinOPT`\n"
+		},
+		"FlowConfiguration": {
+			"type": "object",
+			"properties": {
+				"PaymentMaxRetryCount": {
+					"type": "integer",
+					"description": "Maximum number of retry attempts for payment flow.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": 6
+				},
+				"PaymentRetryDelay": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Delay between payment flow retry attempts.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": "00:00:05"
+				},
+				"RetryFinishTransactionDelay": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Time to wait before retrying to finish a transaction.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": "00:00:30"
+				},
+				"ShowHelpDelay": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Delay before showing help in automatic flow.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": "00:00:15"
+				},
+				"ShowCancelDelay": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Delay before showing cancel option in automatic flow.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": "00:00:20"
+				},
+				"ShowCancelDuration": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Duration for which the cancel option is displayed.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
+					"default": "00:00:30"
+				}
+			},
+			"description": "Configuration for automated flow logic.\n \n*Used by apps:* `WinOPT`\n"
+		},
+		"ConnectedDevices": {
+			"type": "object",
+			"properties": {
+				"OPTs": {
+					"$ref": "#/$defs/connectedOptConfiguration",
+					"description": "List of connected OPT devices.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"readOnly": true
+				}
+			},
+			"description": "Configuration of connected devices.\n \n*Used by apps:* `WinPOS`\n"
+		},
 		"SixpayPaymentOptions": {
 			"type": [
 				"object",
@@ -1597,6 +1702,225 @@
 			],
 			"description": "IS Credit payment options.\n \n*Used by apps:* `WinPOS`\n"
 		},
+		"DummyPaymentOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"Active": {
+					"type": "boolean",
+					"description": "Indicates if dummy payment module is active.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": false
+				},
+				"ReturnErrors": {
+					"type": "boolean",
+					"description": "Indicates if error response should be returned.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": false
+				}
+			},
+			"description": "Dummy payment options.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
+		},
+		"NexgoPaymentModuleOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"TerminalUri": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Uri to terminal.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`\n"
+				},
+				"SecureString": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Password to the terminal.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`\n"
+				},
+				"RetryPolicyCount": {
+					"type": "integer",
+					"description": "Number of retries on failed HTTP request, retry count is used for exponential backoff retry policy\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`\n",
+					"default": 5
+				},
+				"HttpClientHandlerLifeTime": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`\n",
+					"default": "00:05:00"
+				}
+			},
+			"required": [
+				"TerminalUri",
+				"SecureString"
+			],
+			"description": "Nexgo payment module options.\n \n*Used by apps:* `WinPOS`,`WinSCO`\n"
+		},
+		"EcrEftPaymentOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"BaseAddress": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Ecr connector base address.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"CountryCode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Country code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"CreditGroupMappingCode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Credit group mapping code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"VatClassMappingCode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Vat class mapping code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"VatClassPartnerMappingCode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Vat class mapping code for partner.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"FuelProductMappingCode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "File product mapping code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"ExternalSymbolMode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "External symbol mode.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"RemoveZeroUnitPriceBasketItems": {
+					"type": "boolean",
+					"description": "Remove zero unit price basket items.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": false
+				},
+				"OfflinePaymentCodes": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Offline payment codes.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"SendCardAsManualInOffline": {
+					"type": "boolean",
+					"description": "In offline mode sand card in manual card format.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"BalancePrefixes": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Balance card prefixes.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"BankCardTypePrefix": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Bank card type prefix.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"FleetCardTypePrefix": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Fleet card type prefix.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"AllowedGiftCards": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Allowed gift cards.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"AllowedPrepaidCards": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Allowed prepaid cards.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"CancelApprovedResponseCodes": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Cancel approved response codes.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"PrepaidCashPaymentCode": {
+					"type": "integer",
+					"description": "Prepaid cash payment code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"PrepaidCardPaymentCode": {
+					"type": "integer",
+					"description": "Prepaid card payment code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"GiftCashPaymentCode": {
+					"type": "integer",
+					"description": "Gift cash payment code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"GiftCardPaymentCode": {
+					"type": "integer",
+					"description": "Gift card payment code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"SkipLineModification": {
+					"type": "boolean",
+					"description": "Indicates if the payment module should skip line modification.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"DummyPaymentModule": {
+					"type": "boolean",
+					"description": "Specify if the pre-auth should be emulated.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				}
+			},
+			"required": [
+				"BaseAddress",
+				"CreditGroupMappingCode",
+				"VatClassMappingCode",
+				"VatClassPartnerMappingCode",
+				"FuelProductMappingCode",
+				"ExternalSymbolMode"
+			],
+			"description": "Ecr Eft payment module options.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+		},
 		"CashAcceptorPaymentOptions": {
 			"type": "object",
 			"properties": {
@@ -1721,6 +2045,63 @@
 				}
 			},
 			"description": "Setting for automation testings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
+		},
+		"OptSettings": {
+			"type": "object",
+			"properties": {
+				"MonitorIndex": {
+					"type": "integer",
+					"description": "Index of the monitor to use. Default is -1 (not set).\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n",
+					"default": -1
+				},
+				"Dispensers": {
+					"description": "Array of dispenser IDs available for OPT.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n",
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"DefaultStartupMode": {
+					"description": "Default startup mode for OPT flow.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n",
+					"default": 2,
+					"enum": [
+						"Closed",
+						"FastLane",
+						"Preauthorization",
+						"Service"
+					]
+				},
+				"DefaultStartupModeMessage": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Optional message to display for the default startup mode.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"AllowedL8s": {
+					"$ref": "#/$defs/arrayOfString",
+					"description": "List of allowed language codes for OPT.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"Amounts": {
+					"$ref": "#/$defs/arrayOfNumber",
+					"description": "Array of allowed fuel amounts.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"ScreenwashAmounts": {
+					"$ref": "#/$defs/arrayOfNumber",
+					"description": "Array of allowed screen wash amounts.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n"
+				},
+				"VatCustomerEnabled": {
+					"type": "boolean",
+					"description": "Indicates whether VAT customer functionality is enabled.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n",
+					"default": false
+				},
+				"BlockSaleOnUnhealthyModules": {
+					"type": "boolean",
+					"description": "Indicates if the sale should be blocked when there is any unhealthy module.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n",
+					"default": false
+				}
+			},
+			"description": "Represents local OPT settings configuration.\n \n*Used by apps:* `WinOPT`\n"
 		}
 	},
 	"description": "Describes the configuration for the WindowsPOS, SCO, OPT, including settings for various modules and features\n \n \n \n*Recommended config level* defines the level where parameter is SHOULD be defined.\n \n   - `System`: System level – applies to **all merchants** and the **entire system**.\n \n   - `Merchant`: Merchant level – applies to a **single registered merchant**.\n \n   - `Location`: Location level – applies to **all applications** at a specific location.\n \n   - `Application`: Application level – applies to the **current application only**.\n \n  - `Appsettings`: Appsettings – value is read from **`appsettings.json`**.\n \n \n \n*Change type* defines when changes are applied to the application.\n \n   - `Automatic`: Changes are applied automatically while the application is running.\n \n   - `Restart`: Changes require a **restart of the application** to take effect.\n \n \n \n*Used by applications* indicates which applications utilize this configuration.\n \n   - `WinPos`: Windows POS application.\n \n   - `WinSco`: Windows SCO application.\n \n   - `WinOpt`: Windows OPT application.\n \n",
@@ -1870,6 +2251,16 @@
 			},
 			"description": "Promition definition.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 		},
+		"connectedOptConfiguration": {
+			"type": "object",
+			"properties": {
+				"Urls": {
+					"$ref": "#/$defs/arrayOfString",
+					"description": "List of connected OPT API URLs.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+				}
+			},
+			"description": "Connected OPTs configuration.\n \n*Used by apps:* `WinPOS`\n"
+		},
 		"gloryConfiguration": {
 			"type": "object",
 			"properties": {
@@ -1904,6 +2295,12 @@
 				}
 			},
 			"description": "\n \n*Used by apps:* `WinPOS`\n"
+		},
+		"arrayOfNumber": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/number"
+			}
 		}
 	}
 }
