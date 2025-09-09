@@ -1844,16 +1844,22 @@
 				},
 				"BankCardTypePrefix": {
 					"type": [
-						"string",
+						"array",
 						"null"
 					],
+					"items": {
+						"type": "string"
+					},
 					"description": "Bank card type prefix.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
 				"FleetCardTypePrefix": {
 					"type": [
-						"string",
+						"array",
 						"null"
 					],
+					"items": {
+						"type": "string"
+					},
 					"description": "Fleet card type prefix.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
 				"AllowedGiftCards": {
@@ -1935,6 +1941,376 @@
 				}
 			},
 			"description": "Available discount in pos.\n \n*Used by apps:* `WinPOS`\n"
+		},
+		"DummyModuleOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"PaperWidth": {
+					"type": "integer",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": 42
+				},
+				"ShowStatus": {
+					"type": "boolean",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": true
+				},
+				"LanguageIsoCode": {
+					"type": "string",
+					"description": "Language ISO code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "hu"
+				}
+			},
+			"description": "Fiscal module options."
+		},
+		"FiscalVirtualOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"PaperWidth": {
+					"type": "integer",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": 42
+				},
+				"ShowStatus": {
+					"type": "boolean",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": true
+				},
+				"PageWidth": {
+					"type": "integer",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 44
+				},
+				"DeviceType": {
+					"$ref": "#/$defs/deviceType",
+					"description": "Device type.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 0
+				},
+				"BoldEnable": {
+					"type": "string",
+					"description": "Bold enable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "\u001B!\u0018"
+				},
+				"BoldDisable": {
+					"type": "string",
+					"description": "Bold disable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "\u001B!\u0000"
+				},
+				"BigFontEnable": {
+					"type": "string",
+					"description": "Big font enable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "\u001D!\u0001"
+				},
+				"BigFontDisable": {
+					"type": "string",
+					"description": "Big font disable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "\u001D!\u0000"
+				},
+				"QrCodeSequence": {
+					"type": "string",
+					"description": "Qr code sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "\\x1B\\x61\\x31\\x1D\\x28\\x6B\\x04\\x00\\x31\\x41\\x32\\x00\\x1D\\x28\\x6B\\x03\\x00\\x31\\x43\\x05\\x1D\\x28\\x6B\\x03\\x00\\x31\\x45\\x31\\x1D\\x28\\x6B[len:16]\\x31\\x50\\x30[code]\\x1D\\x28\\x6B\\x03\\x00\\x31\\x51\\x30\\x1B\\x61\\x30"
+				},
+				"AdditionalQrCodeInfo": {
+					"type": "string",
+					"description": "Additional qr code information.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				}
+			},
+			"description": "Fiscal module options."
+		},
+		"FisCatOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"PaperWidth": {
+					"type": "integer",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": 42
+				},
+				"ShowStatus": {
+					"type": "boolean",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": true
+				},
+				"BaseUri": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Schema, host and port of FisCat.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n"
+				},
+				"ElectronicJournalPaths": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "Path to xml POS journal.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n"
+				},
+				"ItemsPerCommand": {
+					"type": [
+						"integer",
+						"null"
+					],
+					"description": "How manny items is send to receipt in one command.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n"
+				}
+			},
+			"description": "Fiscal module options."
+		},
+		"OECOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"PaperWidth": {
+					"type": "integer",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": 42
+				},
+				"ShowStatus": {
+					"type": "boolean",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": true
+				},
+				"CashRegisterCode": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Cash register code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n"
+				},
+				"BaseAddress": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Schema, host and port of OEC.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n"
+				},
+				"EmailReceiptRenderer": {
+					"type": "boolean",
+					"description": "Email receipt renderer.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n"
+				},
+				"FreePrintFeedLines": {
+					"type": "integer",
+					"description": "How many lines should be fed after free print.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n"
+				},
+				"AdditionalQrCodeInfo": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Some information to second QR code.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n"
+				},
+				"BoldEnable": {
+					"type": "string",
+					"description": "Bold enable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001B!\u0018"
+				},
+				"BoldDisable": {
+					"type": "string",
+					"description": "Bold disable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001B!\u0000"
+				},
+				"BigFontEnable": {
+					"type": "string",
+					"description": "Big font enable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001D!\u0001"
+				},
+				"BigFontDisable": {
+					"type": "string",
+					"description": "Big font disable printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001D!\u0000"
+				},
+				"QrCodeSequence": {
+					"type": "string",
+					"description": "Fiscal UUID QR code printer sequence.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001Ba1\u001D(k\u0004\u00001A2\u0000\u001D(k\u0003\u00001C\u0005\u001D(k\u0003\u00001E1\u001D(k[len:16]1P0[code]\u001D(k\u0003\u00001Q0\u001Ba0"
+				},
+				"CenterTextEnable": {
+					"type": "string",
+					"description": "Sequence to enable centered text.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001Ba\u0001"
+				},
+				"DisableCenterText": {
+					"type": "string",
+					"description": "Sequence to disable centered text.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "\u001Ba\u0000"
+				}
+			},
+			"description": "Fiscal module options."
+		},
+		"SLOFiscalOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"PaperWidth": {
+					"type": "integer",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": 42
+				},
+				"ShowStatus": {
+					"type": "boolean",
+					"description": "Page width.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": true
+				},
+				"BaseUrl": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Base url to registration server\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"InvoiceNumberingStructure": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice numbering structure.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"RootCertificateFileName": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Root certificate path.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"ClientCertificateFileName": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Client certificate path.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"InvoiceSchema": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"InvoiceCopyCount": {
+					"type": "integer",
+					"description": "Invoice count issued.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 2
+				},
+				"MaxInvoiceCashLimit": {
+					"type": [
+						"number",
+						"null"
+					],
+					"description": "Maximal amout for invoice payment in cash.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 420
+				}
+			},
+			"description": "Fiscal module options."
+		},
+		"DummyPrinterOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"Enabled": {
+					"type": "boolean",
+					"description": "Enabled parameter for setup dummy printer. True when enabled printer.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": true
+				}
+			},
+			"description": "Dummy printer options.\n \n*Used by apps:* `WinPOS`\n"
+		},
+		"SerialPrinterOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"SerialPortOptions": {
+					"$ref": "#/$defs/serialPortOptions",
+					"description": "Serial port options.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"SequenceOptions": {
+					"$ref": "#/$defs/sequenceOptions",
+					"description": "Sequence options.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"Encoding": {
+					"type": "string",
+					"description": "Encoding.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "ibm852"
+				},
+				"PrinterType": {
+					"$ref": "#/$defs/printerType",
+					"description": "Printer type.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 0
+				},
+				"RequirePrinterForReceipts": {
+					"type": "boolean",
+					"description": "Receipt registration fail, if printer is not ready.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": true
+				}
+			},
+			"description": "Serial printer options.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+		},
+		"OPTSaneiPrinterOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"SerialPortOptions": {
+					"$ref": "#/$defs/serialPortOptions",
+					"description": "Serial port options.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"SequenceOptions": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"EscSequences": {
+							"description": "Esc sequences.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+							"type": "object",
+							"additionalProperties": {
+								"type": "string"
+							}
+						}
+					},
+					"description": "Sequence options."
+				},
+				"PortHandshake": {
+					"$ref": "#/$defs/handshake",
+					"description": "Handshake.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 0
+				},
+				"SerialPortTimeout": {
+					"type": "number",
+					"description": "Serial port timeout.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 10
+				},
+				"TimerPeriod": {
+					"type": "integer",
+					"description": "Timer period.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 15000
+				},
+				"PartialCut": {
+					"type": "boolean",
+					"description": "Partial cut.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": false
+				}
+			},
+			"description": "OPT Sanei printer options.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 		},
 		"KeycloakSettings": {
 			"type": "object",
@@ -2295,6 +2671,87 @@
 				}
 			},
 			"description": "\n \n*Used by apps:* `WinPOS`\n"
+		},
+		"deviceType": {
+			"enum": [
+				"POS",
+				"OPT"
+			],
+			"description": "Device type."
+		},
+		"serialPortOptions": {
+			"type": "object",
+			"properties": {
+				"Port": {
+					"type": "string",
+					"description": "Port name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"BaudRate": {
+					"type": "integer",
+					"description": "Baud rate.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 9600
+				},
+				"Parity": {
+					"description": "Parity.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 0,
+					"enum": [
+						"None",
+						"Odd",
+						"Even",
+						"Mark",
+						"Space"
+					]
+				},
+				"DataBits": {
+					"type": "integer",
+					"description": "Data bits.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 8
+				},
+				"StopBits": {
+					"description": "Stop bits.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 1,
+					"enum": [
+						"None",
+						"One",
+						"Two",
+						"OnePointFive"
+					]
+				},
+				"Handshake": {
+					"$ref": "#/$defs/handshake",
+					"description": "Handshake.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 0
+				}
+			},
+			"description": "Serial port options.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+		},
+		"handshake": {
+			"enum": [
+				"None",
+				"XOnXOff",
+				"RequestToSend",
+				"RequestToSendXOnXOff"
+			]
+		},
+		"sequenceOptions": {
+			"type": "object",
+			"properties": {
+				"EscSequences": {
+					"description": "Esc sequences.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"type": "object",
+					"additionalProperties": {
+						"type": "string"
+					}
+				}
+			},
+			"description": "Sequence options.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+		},
+		"printerType": {
+			"enum": [
+				"Diebold",
+				"Epson"
+			],
+			"description": "Printer type enum."
 		},
 		"arrayOfNumber": {
 			"type": "array",
