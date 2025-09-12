@@ -1596,21 +1596,21 @@
 						"string",
 						"null"
 					],
-					"description": "Api url.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n"
+					"description": "Api url.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n"
 				},
 				"EPayApiUserName": {
 					"type": [
 						"string",
 						"null"
 					],
-					"description": "Api user name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+					"description": "Api user name.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
 				},
 				"EPayApiPassword": {
 					"type": [
 						"string",
 						"null"
 					],
-					"description": "Api password.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+					"description": "Api password.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
 				}
 			},
 			"description": "Epay payment options.\n \n*Used by apps:* `WinPOS`\n"
