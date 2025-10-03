@@ -1,0 +1,509 @@
+{
+	"type": "object",
+	"properties": {
+		"ManualDailyClosureConfiguration": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"NotifyFrom": {
+					"$ref": "#/$defs/timeOnly",
+					"description": "Time of the day indicating when notifications about the manual daily closure requirement should start to be dispatched to clients",
+					"default": "20:00:00"
+				},
+				"NotifyTo": {
+					"$ref": "#/$defs/timeOnly",
+					"description": "Time of the day indicating when notifications about the manual daily closure requirement should stop to be dispatched to clients",
+					"default": "23:59:00"
+				}
+			},
+			"description": "Configures various behaviour connected to manual daily closure."
+		},
+		"PriceChangeOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"RefreshIntervalSec": {
+					"type": "integer",
+					"description": "Interval for price changes status update in seconds",
+					"default": 60,
+					"minimum": 1
+				},
+				"MaxPriceDigits": {
+					"type": "integer",
+					"description": "Maximum digits that price can have",
+					"default": 4
+				},
+				"VisibleBefore": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "The time interval prior to executing a price change at which changes are visible",
+					"default": "02:00:00"
+				},
+				"AttemptsToBlockProduct": {
+					"type": "integer",
+					"description": "The number of attempts to apply a price change before considering it 'failed' and blocking authorization for that product. 0 means that no block will be performed.",
+					"default": 0
+				},
+				"MaxInProgressTime": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Max amount of time to consider InProgress price change valid, if limit passes price change will be considered failed and system will try to apply it again.",
+					"default": "00:10:00"
+				},
+				"BlockedProductEmailOptions": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"Interval": {
+							"$ref": "#/$defs/timeSpan",
+							"description": "Email sending interval: If set to 00:00:00, the email will be sent only once without any repetition.",
+							"default": "01:00:00"
+						},
+						"From": {
+							"type": "string",
+							"description": "Sender email address."
+						},
+						"To": {
+							"description": "Email recipients.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"Subject": {
+							"type": "string",
+							"description": "Email subject."
+						},
+						"Host": {
+							"type": "string",
+							"description": "Server host"
+						},
+						"Port": {
+							"type": "integer",
+							"description": "Email port."
+						},
+						"UseTls": {
+							"type": "boolean",
+							"description": "Flag to use TLS.",
+							"default": false
+						},
+						"Username": {
+							"type": [
+								"string",
+								"null"
+							],
+							"description": "Username",
+							"default": null
+						},
+						"Password": {
+							"type": [
+								"string",
+								"null"
+							],
+							"description": "Password.",
+							"default": null
+						}
+					},
+					"required": [
+						"From",
+						"To",
+						"Subject",
+						"Host",
+						"Port"
+					],
+					"if": {
+						"properties": {
+							"UseTls": {
+								"const": true
+							}
+						},
+						"required": [
+							"UseTls"
+						]
+					},
+					"then": {
+						"required": [
+							"Username",
+							"Password"
+						]
+					},
+					"description": "Options for email notification about product being blocked. If empty no email notification used.",
+					"default": null
+				}
+			},
+			"description": "Configures various behaviour connected to price change."
+		},
+		"SiteControllerDevicesConfiguration": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"TanksRefreshIntervalSeconds": {
+					"type": "integer",
+					"description": "Configures tank data refresh interval. When executed -> tank collect its measurement data (measurement data Volume, Level etc..).",
+					"default": 60,
+					"minimum": 1
+				},
+				"TankDataAgeThresholdSeconds": {
+					"type": "integer",
+					"description": "Threshold in seconds that sets maximum age of tank measurement. If measurement is older it is considered as not valid.",
+					"default": 7200,
+					"minimum": 0
+				},
+				"AutoClearZeroTransactions": {
+					"type": "boolean",
+					"description": "Configures if zero transactions should be cleared automatically. Zerro transaction is transaction with 0 quantity/amount.",
+					"default": true
+				},
+				"SiteControllerLocalDeviceId": {
+					"type": "integer",
+					"description": "Id of siteController on local site, for example used in communication with DOMS as POS identity when automatically lock/clearing transactions.",
+					"default": 60,
+					"minimum": 1,
+					"maximum": 80
+				},
+				"DispenserErrorAlertSec": {
+					"type": "integer",
+					"description": "Time in seconds that if dispenser stays in error state, alert is fired.",
+					"default": 30,
+					"minimum": 0
+				},
+				"DispenserTransactionUnpaidAlertSec": {
+					"type": "integer",
+					"description": "Time in seconds that if dispenser transaction stays unpaid, alert is fired.",
+					"default": 120,
+					"minimum": 0
+				},
+				"DispenserTransactionActiveAlertSec": {
+					"type": "integer",
+					"description": "Time in seconds that if dispenser transaction stays as active fuelling, alert is fired.",
+					"default": 120,
+					"minimum": 0
+				},
+				"DispenserDelayBetweenResendNotificationsMiliseconds": {
+					"type": "integer",
+					"description": "Time in milliseconds to delay resending configured notifications.",
+					"default": 10000,
+					"minimum": 0
+				},
+				"DispensersPreauthorizationConfiguration": {
+					"description": "Configuration related to dispensers preauthorization.",
+					"type": "object",
+					"properties": {
+						"DefaultPreauthorizationAmountAdjustment": {
+							"$ref": "#/$defs/number",
+							"description": "Default adjustment value for amount based preauthorization.",
+							"default": 0
+						},
+						"DefaultPreauthorizationVolumeAdjustment": {
+							"$ref": "#/$defs/number",
+							"description": "Default adjustment value for volume based preauthorization.",
+							"default": 0
+						},
+						"DefaultDispensingAmountLimit": {
+							"$ref": "#/$defs/number",
+							"description": "Default dispensing limit which siteController sets for dispenser with Automatic DispenserAuthorizationType. If 0, no limit is set.",
+							"minimum": 0,
+							"default": 0
+						},
+						"DeviceSpecificConfigurations": {
+							"description": "Preauthorization configurations for specific device.",
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"DispenserNumber": {
+										"type": "integer",
+										"description": "Dispenser number.",
+										"minimum": 1
+									},
+									"PreauthorizationAmountAdjustment": {
+										"$ref": "#/$defs/number",
+										"description": "Adjustment value for amount based preauthorization.",
+										"minimum": 0
+									},
+									"PreauthorizationVolumeAdjustment": {
+										"$ref": "#/$defs/number",
+										"description": "Adjustment value for volume based preauthorization.",
+										"minimum": 0
+									}
+								},
+								"required": [
+									"DispenserNumber",
+									"PreauthorizationAmountAdjustment",
+									"PreauthorizationVolumeAdjustment"
+								]
+							}
+						}
+					}
+				}
+			},
+			"description": "Configures various behaviour connected to devices."
+		},
+		"ForecourtLoggerConfiguration": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"DispenserActivityTechnicalLogFilename": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Configures path and file name for dispenser activity forecourt log. If null no log is created",
+					"default": null
+				},
+				"DispenserTotalizersTechnicalLogFilename": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Configures path and file name for totalizer forecourt log. If null no log is created",
+					"default": null
+				},
+				"TankMeasurementTechnicalLogFilename": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Configures path and file name for tank measurement forecourt log. If null no log is created",
+					"default": null
+				},
+				"DispenserTotalizersTechnicalLogInterval": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Configures interval for dispenser totalizer forecourt log. DispenserTotalizersTechnicalLogFilename has to be filled for this parameter to function.",
+					"default": "01:00:00"
+				},
+				"TankMeasurementTechnicalLogInterval": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Configures interval for tank measurement forecourt log. TankMeasurementTechnicalLogFilename has to be filled for this parameter to function.",
+					"default": "01:00:00"
+				},
+				"TechnicalLogRotationInterval": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Configures interval for dispenser activity forecourt log. DispenserActivityTechnicalLogFilename has to be filled for this parameter to function.",
+					"default": "30.00:00:00"
+				}
+			},
+			"description": "Configures various behaviour connected to forecourt logger."
+		},
+		"PosybeRegistrator": {
+			"description": "Configures various behaviour connected to posybe registrator.",
+			"type": "object",
+			"properties": {
+				"Secret": {
+					"type": "string",
+					"description": "Secret which is used to decrypt _regfile used in registration.",
+					"default": ""
+				}
+			},
+			"required": [
+				"Secret"
+			]
+		},
+		"FcExportOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"ExportIntervalMinutes": {
+					"type": "integer",
+					"description": "Configures interval in minutes in which forecourt data are automatically send to platform. Note: after each forecourt data is created sending mechanism is triggered anyway",
+					"default": 5,
+					"minimum": 1
+				},
+				"FailedExportRetryDelayMinutes": {
+					"type": "integer",
+					"description": "Configures interval in minutes in which forecourt data which previously failed to be send to plaftorm are automatically resend. Note: after each forecourt data is created resending mechanism is triggered anyway",
+					"default": 1,
+					"minimum": 1
+				}
+			},
+			"description": "Configures various behaviour connected to export of forecourt data."
+		},
+		"ApiCallsResendOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"ResendIntervalMinutes": {
+					"type": "integer",
+					"description": "Configures interval in minutes in which failed api calls are automatically resend to platform.",
+					"default": 5,
+					"minimum": 1
+				},
+				"FailedResendRetryDelayMinutes": {
+					"type": "integer",
+					"description": "Delay in minutes for failed api calls to be resend.",
+					"default": 1,
+					"minimum": 0
+				},
+				"MaxAttempts": {
+					"type": "integer",
+					"description": "Max attempts for api call to be resend.",
+					"default": 1,
+					"minimum": 0
+				}
+			},
+			"description": "Configures various behaviour connected to resend of api calls."
+		},
+		"AutoDataCollectionOptions": {
+			"description": "Configures various behaviour connected to automatic data collection.",
+			"type": "object",
+			"properties": {
+				"AutoStoreDispenserTransactions": {
+					"type": "boolean",
+					"description": "Switch to automatically store dispenser transactions. Does not work for zero transactions.",
+					"default": true
+				},
+				"AutoStoreZeroTransactions": {
+					"type": "boolean",
+					"description": "Switch to automatically store zero dispenser transactions reported by HW. Meaning 0 quantity/amount. Note: if zero transactions are not allowed on HW (for example DOMS) they wont be reported by HW so SiteController cannot store them",
+					"default": true
+				},
+				"AutoStoreTankMeasurementsOnAlarm": {
+					"type": "boolean",
+					"description": "Switch to create Informative forecourt inventory whenever alarm on tank is raised.",
+					"default": true
+				},
+				"AutoNozzleStoreInterval": {
+					"type": "integer",
+					"description": "Interval in minutes to create Periodic forecourt inventory containing nozzle registers. Note: if AutoNozzleStoreInterval and AutoStoreTankMeasurementsInterval are equal -> only one FC inventory will be created containing both types of data.",
+					"default": 15,
+					"minimum": 1
+				},
+				"AutoStoreTankMeasurementsInterval": {
+					"type": "integer",
+					"description": "Interval in minutes to create Periodic forecourt inventory containing tank measurements. Note: if AutoNozzleStoreInterval and AutoStoreTankMeasurementsInterval are equal -> only one FC inventory will be created containing both types of data.",
+					"default": 15,
+					"minimum": 1
+				},
+				"AutomaticDailyClosureTriggerCron": {
+					"type": "string",
+					"description": "Cron expression which sets when automatic daily closure is executed.",
+					"default": "0 59 23 * * ?",
+					"pattern": "^(?:[0-5]?\\d) (?:[0-5]?\\d) (?:[01]?\\d|2[0-3]) (?:[1-9]|[12]\\d|3[01]|\\*|\\?) (?:0?[1-9]|1[0-2]|\\*) (?:[0-7]|\\*|\\?)$"
+				},
+				"DailyClosureMergeMaxRestoreDays": {
+					"type": "integer",
+					"description": "Max days to past for restoration of unmerged daily closures.",
+					"default": 65,
+					"minimum": 1
+				},
+				"DailyClosureMergeAutoTriggerHours": {
+					"type": "integer",
+					"description": "SC will automatically try to check for unmerged daily closures in set interval specified by this parameter in hours.",
+					"default": 2,
+					"minimum": 1
+				},
+				"ForecourtDataCleanupTriggerCron": {
+					"type": "string",
+					"description": "Cron expression which sets when automatic forecourt data removal job should be triggered.",
+					"default": "0 0 2 1/1 * ? *",
+					"pattern": "^(?:[0-5]?\\d) (?:[0-5]?\\d) (?:[01]?\\d|2[0-3]) (?:(?:[1-9]|[12]\\d|3[01])|\\*|\\?|[1-9]/[1-9]\\d*) (?:0?[1-9]|1[0-2]|\\*) (?:[0-7]|\\*|\\?) (?:\\*|\\d{4})$"
+				},
+				"ForecourtDataRetentionPeriodInDays": {
+					"type": "integer",
+					"description": "Max age in days for forecourt data to be stored in SC, if older data will be removed by ForecourtDataCleanup.",
+					"minimum": 1,
+					"default": 30
+				}
+			}
+		},
+		"PlatformSettings": {
+			"description": "Configures various behaviour connected to platform.",
+			"type": "object",
+			"properties": {
+				"KeycloakSettings": {
+					"description": "Keycloak related settings.",
+					"type": "object",
+					"properties": {
+						"KeycloakHost": {
+							"type": "string",
+							"description": "Keycloak host."
+						},
+						"KeycloakClientId": {
+							"type": "string",
+							"description": "Keycloak client id."
+						},
+						"KeycloakClientSecret": {
+							"type": "string",
+							"description": "Keycloak secret."
+						},
+						"KeycloakRealm": {
+							"type": "string",
+							"description": "Keycloak realm."
+						}
+					},
+					"required": [
+						"KeycloakHost",
+						"KeycloakClientId",
+						"KeycloakClientSecret",
+						"KeycloakRealm"
+					]
+				},
+				"PlatformBaseUrl": {
+					"type": "string",
+					"description": "Platform base url."
+				},
+				"HttpClientOptions": {
+					"description": "Platform HttpClient options.",
+					"type": "object",
+					"properties": {
+						"TimeoutInSeconds": {
+							"type": "integer",
+							"description": "Http client timeout in seconds.",
+							"default": 20,
+							"minimum": 1
+						}
+					}
+				}
+			},
+			"required": [
+				"KeycloakSettings",
+				"PlatformBaseUrl"
+			]
+		},
+		"DebugOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"PriceChangeException": {
+					"type": "boolean",
+					"description": "Manually throws exception when trying to apply price change",
+					"default": false
+				}
+			},
+			"description": "Various debug options for the site controller."
+		}
+	},
+	"required": [
+		"PosybeRegistrator",
+		"PlatformSettings",
+		"DebugOptions"
+	],
+	"description": "SiteController configuration",
+	"$defs": {
+		"timeOnly": {
+			"type": "string",
+			"format": "time"
+		},
+		"timeSpan": {
+			"type": "string",
+			"format": "duration"
+		},
+		"number": {
+			"type": "number"
+		}
+	}
+}
