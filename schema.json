@@ -607,7 +607,7 @@
 				"ReloadViewDelay": {
 					"$ref": "#/$defs/number",
 					"description": "Reload view delay in milliseconds.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
-					"default": 1000
+					"default": 350
 				},
 				"HubReconnectDelay": {
 					"type": [
@@ -828,6 +828,11 @@
 					"$ref": "#/$defs/highRiskItemControl",
 					"description": "High-risk item control.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
 					"default": 1
+				},
+				"DefaultToastVisibilityInSeconds": {
+					"type": "integer",
+					"description": "Default toast visibility in seconds.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 5
 				},
 				"FuelDeliveryEnabled": {
 					"type": "boolean",
@@ -1497,12 +1502,36 @@
 			"type": "object",
 			"properties": {
 				"OPTs": {
-					"$ref": "#/$defs/connectedOptConfiguration",
-					"description": "List of connected OPT devices.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
-					"readOnly": true
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"Urls": {
+							"$ref": "#/$defs/arrayOfString",
+							"description": "List of connected OPT API URLs.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						}
+					},
+					"description": "List of connected OPT devices."
 				}
 			},
 			"description": "Configuration of connected devices.\n \n*Used by apps:* `WinPOS`\n"
+		},
+		"MessageCenterSettings": {
+			"type": "object",
+			"properties": {
+				"Enabled": {
+					"type": "boolean",
+					"description": "Flag whether messaging is enabled on merchant.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": false
+				},
+				"ReminderInterval": {
+					"type": "integer",
+					"description": "High priority message reminder interval in minutes.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": 10
+				}
+			},
+			"description": "Message center settings.\n \n*Used by apps:* `WinPOS`\n"
 		},
 		"SixpayPaymentOptions": {
 			"type": [
@@ -1986,6 +2015,13 @@
 					"description": "Page width.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
 					"default": true
 				},
+				"InvoiceSchema": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
 				"LanguageIsoCode": {
 					"type": "string",
 					"description": "Language ISO code.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
@@ -2009,6 +2045,13 @@
 					"type": "boolean",
 					"description": "Page width.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
 					"default": true
+				},
+				"InvoiceSchema": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
 				"PageWidth": {
 					"type": "integer",
@@ -2068,6 +2111,13 @@
 					"description": "Page width.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
 					"default": true
 				},
+				"InvoiceSchema": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
 				"BaseUri": {
 					"type": [
 						"string",
@@ -2110,6 +2160,13 @@
 					"type": "boolean",
 					"description": "Page width.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
 					"default": true
+				},
+				"InvoiceSchema": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
 				"CashRegisterCode": {
 					"type": [
@@ -2174,6 +2231,14 @@
 					"type": "string",
 					"description": "Sequence to disable centered text.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
 					"default": "\u001Ba\u0000"
+				},
+				"FiscalReceiptLimit": {
+					"type": [
+						"number",
+						"null"
+					],
+					"description": "Fiscal receipt limit.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n",
+					"default": 400
 				}
 			},
 			"description": "Fiscal module options."
@@ -2193,6 +2258,13 @@
 					"type": "boolean",
 					"description": "Page width.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
 					"default": true
+				},
+				"InvoiceSchema": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
 				"BaseUrl": {
 					"type": [
@@ -2222,13 +2294,6 @@
 					],
 					"description": "Client certificate path.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
-				"InvoiceSchema": {
-					"type": [
-						"string",
-						"null"
-					],
-					"description": "Invoice schema name.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
-				},
 				"InvoiceCopyCount": {
 					"type": "integer",
 					"description": "Invoice count issued.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
@@ -2239,7 +2304,7 @@
 						"number",
 						"null"
 					],
-					"description": "Maximal amout for invoice payment in cash.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"description": "Maximal amonut for invoice payment in cash.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
 					"default": 420
 				},
 				"AdditionalQrCodeInfo": {
@@ -2474,11 +2539,13 @@
 				},
 				"DefaultStartupMode": {
 					"description": "Default startup mode for OPT flow.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinOPT`\n",
-					"default": 2,
+					"default": 3,
 					"enum": [
+						"Startup",
 						"Closed",
 						"FastLane",
 						"Preauthorization",
+						"Registration",
 						"Service"
 					]
 				},
@@ -2655,16 +2722,6 @@
 				}
 			},
 			"description": "Promition definition.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
-		},
-		"connectedOptConfiguration": {
-			"type": "object",
-			"properties": {
-				"Urls": {
-					"$ref": "#/$defs/arrayOfString",
-					"description": "List of connected OPT API URLs.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
-				}
-			},
-			"description": "Connected OPTs configuration.\n \n*Used by apps:* `WinPOS`\n"
 		},
 		"gloryConfiguration": {
 			"type": "object",
