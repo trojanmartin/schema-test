@@ -149,37 +149,6 @@
 			],
 			"description": "Event bus settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
 		},
-		"Feature": {
-			"type": "object",
-			"properties": {
-				"ExciseTaxEnabled": {
-					"type": "boolean",
-					"description": "Excise tax functionality enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
-					"default": false
-				},
-				"TransactionParkingEnabled": {
-					"type": "boolean",
-					"description": "Transaction parking enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
-					"default": false
-				},
-				"HeatingOilEnabled": {
-					"type": "boolean",
-					"description": "Heating oil enabled.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
-					"default": false
-				},
-				"VacuumAfterUserLogin": {
-					"type": "boolean",
-					"description": "Vacuum database after user login, true start vacuum, otherwise don't vacuum.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
-					"default": false
-				},
-				"TableManagementEnabled": {
-					"type": "boolean",
-					"description": "Table management enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
-					"default": false
-				}
-			},
-			"description": "Feature settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
-		},
 		"SalesSettings": {
 			"type": "object",
 			"properties": {
@@ -749,6 +718,11 @@
 		"TransactionParking": {
 			"type": "object",
 			"properties": {
+				"TransactionParkingEnabled": {
+					"type": "boolean",
+					"description": "Transaction parking enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": false
+				},
 				"NotifyFrom": {
 					"type": "string",
 					"description": "Specify time when to display notification about parked transactions.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
@@ -842,6 +816,16 @@
 				"FuelTransferEnabled": {
 					"type": "boolean",
 					"description": "Fuel transfer enabled.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": false
+				},
+				"ExciseTaxEnabled": {
+					"type": "boolean",
+					"description": "Excise tax functionality enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": false
+				},
+				"TableManagementEnabled": {
+					"type": "boolean",
+					"description": "Table management enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
 					"default": false
 				}
 			},
@@ -1095,6 +1079,11 @@
 				"null"
 			],
 			"properties": {
+				"HeatingOilEnabled": {
+					"type": "boolean",
+					"description": "Heating oil enabled.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": false
+				},
 				"VerifyFarmerBaseUrl": {
 					"type": "string",
 					"description": "Heating oil settings.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
@@ -1400,6 +1389,11 @@
 							]
 						}
 					}
+				},
+				"VacuumAfterUserLogin": {
+					"type": "boolean",
+					"description": "Vacuum database after user login, true start vacuum, otherwise don't vacuum.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": false
 				}
 			},
 			"description": "Pos settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
@@ -1516,6 +1510,30 @@
 				}
 			},
 			"description": "Configuration of connected devices.\n \n*Used by apps:* `WinPOS`\n"
+		},
+		"JarvisSettings": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"BaseUrl": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Base URL of Jarvis API.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinSCO`,`AndroidPOS`\n"
+				},
+				"TimeoutInMilliseconds": {
+					"type": [
+						"integer",
+						"null"
+					],
+					"description": "Timeout in milliseconds for requests to Jarvis API.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinSCO`,`AndroidPOS`\n",
+					"default": 5000
+				}
+			},
+			"description": "PoN - Jarvis settings.\n \n*Used by apps:* `WinSCO`,`AndroidPOS`\n"
 		},
 		"MessageCenterSettings": {
 			"type": "object",
