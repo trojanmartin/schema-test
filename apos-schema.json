@@ -1,1527 +1,530 @@
 {
-  "behavior": {
-    "sectionName": "Behavior",
-    "type": "object",
-    "description": "Device Behavior Configuration.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ],
-    "properties": {
-      "automaticDeviceRestart": {
-        "sectionName": "AutomaticDeviceRestart",
-        "type": "boolean",
-        "description": "Automatic Device Restart Config.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "automaticDeviceRestartTime": {
-        "sectionName": "AutomaticDeviceRestartTime",
-        "type": "string",
-        "description": "Automatic Device Restart Time Config.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "maxItemsPerSynchronizationCycle": {
-        "sectionName": "MaxItemsPerSynchronizationCycle",
-        "type": "number",
-        "description": "Max Items Per Synchronization Cycle Config.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datapac.sk/schemas/applicationmanagementconfiguration-schema.json",
+  "title": "ApplicationManagementConfiguration Configuration Schema",
+  "type": "object",
+  "properties": {
+    "behavior": {
+      "type": "object",
+      "description": "Device Behavior Configuration.",
+      "properties": {
+        "automaticDeviceRestart": {
+          "type": "boolean",
+          "description": "Automatic Device Restart Config."
+        },
+        "automaticDeviceRestartTime": {
+          "type": "string",
+          "description": "Automatic Device Restart Time Config."
+        },
+        "maxItemsPerSynchronizationCycle": {
+          "type": "number",
+          "description": "Max Items Per Synchronization Cycle Config."
+        }
       }
-    }
-  },
-  "cashDrawerConfiguration": {
-    "sectionName": "CashDrawerConfiguration",
-    "type": "object",
-    "description": "Cash drawer configuration.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinPos"
-    ],
-    "properties": {
-      "openCashDrawerMode": {
-        "sectionName": "OpenCashDrawerMode",
-        "type": "number",
-        "description": "Open cash drawer mode.",
-        "configLevel": "Location",
-        "defaultValue": "3",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos"
-        ]
+    },
+    "cashDrawerConfiguration": {
+      "type": "object",
+      "description": "Cash drawer configuration.",
+      "properties": {
+        "openCashDrawerMode": {
+          "type": "number",
+          "description": "Open cash drawer mode.",
+          "default": "3"
+        }
       }
-    }
-  },
-  "closureSettings": {
-    "sectionName": "ClosureSettings",
-    "type": "object",
-    "description": "Definition for closure process.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "closureConfigurations": {
-        "sectionName": "ClosureConfigurations",
-        "type": "object",
-        "description": "Definition for closure process.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos",
-          "WinOpt",
-          "WinPos",
-          "WinSco"
-        ],
-        "properties": {
-          "autoEndShift": {
-            "sectionName": "AutoEndShift",
-            "type": "boolean",
-            "description": "Indicates if shift should be ended automatically.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "autoStartShift": {
-            "sectionName": "AutoStartShift",
-            "type": "boolean",
-            "description": "Indicates if shift should be started automatically.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "automatedDeposit": {
-            "sectionName": "AutomatedDeposit",
-            "type": "boolean",
-            "description": "Indicates if initial deposit should be made automatically.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "automatedDepositAmount": {
-            "sectionName": "AutomatedDepositAmount",
-            "type": "object",
-            "description": "Amounts of automated deposit.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "automatedWithdrawal": {
-            "sectionName": "AutomatedWithdrawal",
-            "type": "boolean",
-            "description": "Indicates if there should be made automated cash withdrawal after closure.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "automaticallyCloseShiftBeforeFiscal": {
-            "sectionName": "AutomaticallyCloseShiftBeforeFiscal",
-            "type": "boolean",
-            "description": "Indicates if shift should be closed automatically before fiscal day.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "cashCurrencies": {
-            "sectionName": "CashCurrencies",
-            "type": "object",
-            "description": "Currency ISO codes which should be included in closure.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "depositCashMovementTypeCode": {
-            "sectionName": "DepositCashMovementTypeCode",
-            "type": "string",
-            "description": "Cash movement type code which should be used for initial deposit.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "fiscalDayCloseMode": {
-            "sectionName": "FiscalDayCloseMode",
-            "type": "string",
-            "description": "Fiscal day close mode.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "fiscalDayOpenMode": {
-            "sectionName": "FiscalDayOpenMode",
-            "type": "string",
-            "description": "Fiscal day open mode.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "maxCashCountAttempts": {
-            "sectionName": "MaxCashCountAttempts",
-            "type": "number",
-            "description": "Maximum count of entering wrong counted MOPs.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "minimalCashBalance": {
-            "sectionName": "MinimalCashBalance",
-            "type": "object",
-            "description": "Minimal amount which should be in cash location after closure.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "minimalDeposit": {
-            "sectionName": "MinimalDeposit",
-            "type": "object",
-            "description": "Minimal amount of specific currency which should be in cash location when closure was started.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "WinSco",
-              "APos",
-              "WinOpt"
-            ]
-          },
-          "minimalDepositOverride": {
-            "sectionName": "MinimalDepositOverride",
-            "type": "boolean",
-            "description": "Indicates if closure can be started with cash amount below minimal deposit.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "mops": {
-            "sectionName": "MOPs",
-            "type": "object",
-            "description": "Methods of payment configuration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "period": {
-            "sectionName": "Period",
-            "type": "string",
-            "description": "Closure configuration period enumeration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "runType": {
-            "sectionName": "RunType",
-            "type": "string",
-            "description": "Closure configuration run type enumeration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "saleOnlySameCashier": {
-            "sectionName": "SaleOnlySameCashier",
-            "type": "boolean",
-            "description": "Indicates if only cashier which open day can sell.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "scheduleDays": {
-            "sectionName": "ScheduleDays",
-            "type": "object",
-            "description": "Schedule days configuration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "scheduleTime": {
-            "sectionName": "ScheduleTime",
-            "type": "string",
-            "description": "Schedule time configuration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "scheduledStartAutomated": {
-            "sectionName": "ScheduledStartAutomated",
-            "type": "boolean",
-            "description": "Indicates if scheduled start is automated.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "scheduledStartTime": {
-            "sectionName": "ScheduledStartTime",
-            "type": "string",
-            "description": "Scheduled start time.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "status": {
-            "sectionName": "Status",
-            "type": "string",
-            "description": "Closure configuration status enumeration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "type": {
-            "sectionName": "Type",
-            "type": "string",
-            "description": "Closure configuration type enumeration.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "warningBefore": {
-            "sectionName": "WarningBefore",
-            "type": "string",
-            "description": "Warning before closure time.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "withdrawalCashMovementTypeCode": {
-            "sectionName": "WithdrawalCashMovementTypeCode",
-            "type": "string",
-            "description": "Cash movement type code which should be used for cash withdrawal after closure.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "withdrawalLimit": {
-            "sectionName": "WithdrawalLimit",
-            "type": "object",
-            "description": "Withdrawal limit amounts.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
-          },
-          "withdrawalMandatory": {
-            "sectionName": "WithdrawalMandatory",
-            "type": "boolean",
-            "description": "Indicates if cash withdrawal is required after closure.",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "WinPos",
-              "APos",
-              "WinSco",
-              "WinOpt"
-            ]
+    },
+    "closureSettings": {
+      "type": "object",
+      "description": "Definition for closure process.",
+      "properties": {
+        "closureConfigurations": {
+          "type": "object",
+          "description": "Definition for closure process.",
+          "properties": {
+            "autoEndShift": {
+              "type": "boolean",
+              "description": "Indicates if shift should be ended automatically."
+            },
+            "autoStartShift": {
+              "type": "boolean",
+              "description": "Indicates if shift should be started automatically."
+            },
+            "automatedDeposit": {
+              "type": "boolean",
+              "description": "Indicates if initial deposit should be made automatically."
+            },
+            "automatedDepositAmount": {
+              "type": "object",
+              "description": "Amounts of automated deposit."
+            },
+            "automatedWithdrawal": {
+              "type": "boolean",
+              "description": "Indicates if there should be made automated cash withdrawal after closure."
+            },
+            "automaticallyCloseShiftBeforeFiscal": {
+              "type": "boolean",
+              "description": "Indicates if shift should be closed automatically before fiscal day."
+            },
+            "cashCurrencies": {
+              "type": "object",
+              "description": "Currency ISO codes which should be included in closure."
+            },
+            "depositCashMovementTypeCode": {
+              "type": "string",
+              "description": "Cash movement type code which should be used for initial deposit."
+            },
+            "fiscalDayCloseMode": {
+              "type": "string",
+              "description": "Fiscal day close mode."
+            },
+            "fiscalDayOpenMode": {
+              "type": "string",
+              "description": "Fiscal day open mode."
+            },
+            "maxCashCountAttempts": {
+              "type": "number",
+              "description": "Maximum count of entering wrong counted MOPs."
+            },
+            "minimalCashBalance": {
+              "type": "object",
+              "description": "Minimal amount which should be in cash location after closure."
+            },
+            "minimalDeposit": {
+              "type": "object",
+              "description": "Minimal amount of specific currency which should be in cash location when closure was started."
+            },
+            "minimalDepositOverride": {
+              "type": "boolean",
+              "description": "Indicates if closure can be started with cash amount below minimal deposit."
+            },
+            "mops": {
+              "type": "object",
+              "description": "Methods of payment configuration."
+            },
+            "period": {
+              "type": "string",
+              "description": "Closure configuration period enumeration."
+            },
+            "runType": {
+              "type": "string",
+              "description": "Closure configuration run type enumeration."
+            },
+            "saleOnlySameCashier": {
+              "type": "boolean",
+              "description": "Indicates if only cashier which open day can sell."
+            },
+            "scheduleDays": {
+              "type": "object",
+              "description": "Schedule days configuration."
+            },
+            "scheduleTime": {
+              "type": "string",
+              "description": "Schedule time configuration."
+            },
+            "scheduledStartAutomated": {
+              "type": "boolean",
+              "description": "Indicates if scheduled start is automated."
+            },
+            "scheduledStartTime": {
+              "type": "string",
+              "description": "Scheduled start time."
+            },
+            "status": {
+              "type": "string",
+              "description": "Closure configuration status enumeration."
+            },
+            "type": {
+              "type": "string",
+              "description": "Closure configuration type enumeration."
+            },
+            "warningBefore": {
+              "type": "string",
+              "description": "Warning before closure time."
+            },
+            "withdrawalCashMovementTypeCode": {
+              "type": "string",
+              "description": "Cash movement type code which should be used for cash withdrawal after closure."
+            },
+            "withdrawalLimit": {
+              "type": "object",
+              "description": "Withdrawal limit amounts."
+            },
+            "withdrawalMandatory": {
+              "type": "boolean",
+              "description": "Indicates if cash withdrawal is required after closure."
+            }
           }
         }
       }
-    }
-  },
-  "couponNumberMatchPattern": {
-    "sectionName": "CouponNumberMatchPattern",
-    "type": "string",
-    "description": "Coupon Number Match Pattern.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ]
-  },
-  "customerApiSettings": {
-    "sectionName": "CustomerApiSettings",
-    "type": "object",
-    "description": "Customer external api settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "baseUrl": {
-        "sectionName": "BaseUrl",
-        "type": "string",
-        "description": "Base url.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
-      }
-    }
-  },
-  "customerDisplayConfiguration": {
-    "sectionName": "CustomerDisplayConfiguration",
-    "type": "object",
-    "description": "Customer Display settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ],
-    "properties": {
-      "adsConfiguration": {
-        "sectionName": "AdsConfiguration",
-        "type": "object",
-        "description": "Ads Configuration.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ],
-        "properties": {
-          "checkingInterval": {
-            "sectionName": "CheckingInterval",
-            "type": "string",
-            "description": "Checking Interval",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "idleScreenTimeout": {
-            "sectionName": "IdleScreenTimeout",
-            "type": "string",
-            "description": "Idle Screen Timeout",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "mediaApiUrl": {
-            "sectionName": "MediaApiUrl",
-            "type": "string",
-            "description": "Media api url",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          },
-          "rotationInterval": {
-            "sectionName": "Rotation Interval",
-            "type": "string",
-            "description": "Rotation Interval",
-            "configLevel": "Location",
-            "defaultValue": "",
-            "changeType": "Automatic",
-            "usedByApps": [
-              "APos"
-            ]
-          }
+    },
+    "couponNumberMatchPattern": {
+      "type": "string",
+      "description": "Coupon Number Match Pattern."
+    },
+    "customerApiSettings": {
+      "type": "object",
+      "description": "Customer external api settings.",
+      "properties": {
+        "baseUrl": {
+          "type": "string",
+          "description": "Base url."
         }
-      },
-      "customerDisplayBg": {
-        "sectionName": "CustomerDisplayBg",
-        "type": "string",
-        "description": "Customer display background image.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
       }
-    }
-  },
-  "discountConfiguration": {
-    "sectionName": "DiscountConfiguration",
-    "type": "object",
-    "description": "Discount configuration for application.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinSco"
-    ],
-    "properties": {
-      "discountEngines": {
-        "sectionName": "DiscountEngines",
-        "type": "object",
-        "description": "List of available discount engines.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "discountEnginesCombinations": {
-        "sectionName": "DiscountEnginesCombinations",
-        "type": "object",
-        "description": "Discount engines combinations matrix.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "discountServiceResponseTimeout": {
-        "sectionName": "DiscountResponseTimeout",
-        "type": "number",
-        "description": "Timeout for discount server response in milliseconds.",
-        "configLevel": "Merchant",
-        "defaultValue": "5000",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "discountServiceUrl": {
-        "sectionName": "DiscountServiceUrl",
-        "type": "string",
-        "description": "Discount service URL.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
+    },
+    "customerDisplayConfiguration": {
+      "type": "object",
+      "description": "Customer Display settings.",
+      "properties": {
+        "adsConfiguration": {
+          "type": "object",
+          "description": "Ads Configuration.",
+          "properties": {
+            "checkingInterval": {
+              "type": "string",
+              "description": "Checking Interval"
+            },
+            "idleScreenTimeout": {
+              "type": "string",
+              "description": "Idle Screen Timeout"
+            },
+            "mediaApiUrl": {
+              "type": "string",
+              "description": "Media api url"
+            },
+            "rotationInterval": {
+              "type": "string",
+              "description": "Rotation Interval"
+            }
+          }
+        },
+        "customerDisplayBg": {
+          "type": "string",
+          "description": "Customer display background image."
+        }
       }
-    }
-  },
-  "eventBus": {
-    "sectionName": "EventBusConfiguration",
-    "type": "object",
-    "description": "Event bus settings.",
-    "configLevel": "Merchant",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "host": {
-        "sectionName": "Host",
-        "type": "string",
-        "description": "RabbitMQ server host name.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "platformExchange": {
-        "sectionName": "PlatformExchange",
-        "type": "string",
-        "description": "Platform Exchange.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "port": {
-        "sectionName": "Port",
-        "type": "number",
-        "description": "RabbitMQ server port.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "retryCount": {
-        "sectionName": "RetryCount",
-        "type": "number",
-        "description": "Number of retries on failure.",
-        "configLevel": "Merchant",
-        "defaultValue": "5",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "tlsPort": {
-        "sectionName": "TlsPort",
-        "type": "number",
-        "description": "Tls port.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "tlsServerName": {
-        "sectionName": "TlsServerName",
-        "type": "string",
-        "description": "Tls server name.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "useTls": {
-        "sectionName": "UseTls",
-        "type": "boolean",
-        "description": "True when use tls.",
-        "configLevel": "Merchant",
-        "defaultValue": "false",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "virtualHost": {
-        "sectionName": "VirtualHost",
-        "type": "string",
-        "description": "RabbitMQ server virtual host.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
+    },
+    "discountConfiguration": {
+      "type": "object",
+      "description": "Discount configuration for application.",
+      "properties": {
+        "discountEngines": {
+          "type": "object",
+          "description": "List of available discount engines."
+        },
+        "discountEnginesCombinations": {
+          "type": "object",
+          "description": "Discount engines combinations matrix."
+        },
+        "discountServiceResponseTimeout": {
+          "type": "number",
+          "description": "Timeout for discount server response in milliseconds.",
+          "default": "5000"
+        },
+        "discountServiceUrl": {
+          "type": "string",
+          "description": "Discount service URL."
+        }
       }
-    }
-  },
-  "forecourtConfiguration": {
-    "sectionName": "ForecourtConfiguration",
-    "type": "object",
-    "description": "Forecourt Configuration.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ],
-    "properties": {
-      "dispenserSalesPriceMismatchHandle": {
-        "sectionName": "DispenserSalesPriceMismatchHandle",
-        "type": "object",
-        "description": "Dispenser Sales Price Mismatc hHandle Configuration.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "dispenserTotalPriceMismatchHandle": {
-        "sectionName": "DispenserTotalPriceMismatchHandle",
-        "type": "object",
-        "description": "Dispenser Total Price Mismatch Handle Configuration.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
+    },
+    "eventBus": {
+      "type": "object",
+      "description": "Event bus settings.",
+      "properties": {
+        "host": {
+          "type": "string",
+          "description": "RabbitMQ server host name."
+        },
+        "platformExchange": {
+          "type": "string",
+          "description": "Platform Exchange."
+        },
+        "port": {
+          "type": "number",
+          "description": "RabbitMQ server port."
+        },
+        "retryCount": {
+          "type": "number",
+          "description": "Number of retries on failure.",
+          "default": "5"
+        },
+        "tlsPort": {
+          "type": "number",
+          "description": "Tls port."
+        },
+        "tlsServerName": {
+          "type": "string",
+          "description": "Tls server name."
+        },
+        "useTls": {
+          "type": "boolean",
+          "description": "True when use tls.",
+          "default": "false"
+        },
+        "virtualHost": {
+          "type": "string",
+          "description": "RabbitMQ server virtual host."
+        }
       }
-    }
-  },
-  "jarvisSettings": {
-    "sectionName": "JarvisSettings",
-    "type": "object",
-    "description": "PoN - Jarvis settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "baseUrl": {
-        "sectionName": "BaseUrl",
-        "type": "string",
-        "description": "Base URL of Jarvis API.",
-        "configLevel": "Application",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinSco",
-          "APos"
-        ]
-      },
-      "timeoutInMilliseconds": {
-        "sectionName": "TimeoutInMilliseconds",
-        "type": "number",
-        "description": "Timeout in milliseconds for requests to Jarvis API.",
-        "configLevel": "Merchant",
-        "defaultValue": "5000",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinSco",
-          "APos"
-        ]
+    },
+    "forecourtConfiguration": {
+      "type": "object",
+      "description": "Forecourt Configuration.",
+      "properties": {
+        "dispenserSalesPriceMismatchHandle": {
+          "type": "object",
+          "description": "Dispenser Sales Price Mismatc hHandle Configuration."
+        },
+        "dispenserTotalPriceMismatchHandle": {
+          "type": "object",
+          "description": "Dispenser Total Price Mismatch Handle Configuration."
+        }
       }
-    }
-  },
-  "mopConfiguration": {
-    "sectionName": "MopConfiguration",
-    "type": "object",
-    "description": "Configuration for mop setup.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinPos",
-      "WinOpt"
-    ],
-    "properties": {
-      "allowedMopCodes": {
-        "sectionName": "AllowedMopCodes",
-        "type": "object",
-        "description": "List of allowed MoP codes. If empty, all MoP codes are allowed.",
-        "configLevel": "Application",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos"
-        ]
-      },
-      "fleetCardsParsingMethods": {
-        "sectionName": "FleetCardsParsingMethods",
-        "type": "object",
-        "description": "Custom mapping for fleet cards data parsing (customer, license plate, etc.) (temporary solution). Mapping is defined by pair Issuer.Code and Parsing method. This definition should be moved into card issuer definition.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinOpt"
-        ]
-      },
-      "mopTerminalAssignment": {
-        "sectionName": "MopTerminalAssignment",
-        "type": "object",
-        "description": "MOP to terminal assignment.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt"
-        ]
+    },
+    "jarvisSettings": {
+      "type": "object",
+      "description": "PoN - Jarvis settings.",
+      "properties": {
+        "baseUrl": {
+          "type": "string",
+          "description": "Base URL of Jarvis API."
+        },
+        "timeoutInMilliseconds": {
+          "type": "number",
+          "description": "Timeout in milliseconds for requests to Jarvis API.",
+          "default": "5000"
+        }
       }
-    }
-  },
-  "oecOptions": {
-    "sectionName": "OECOptions",
-    "type": "object",
-    "description": "FisCat options for fiscal setup.",
-    "configLevel": "Application",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "additionalQrCodeInfo": {
-        "sectionName": "AdditionalQrCodeInfo",
-        "type": "string",
-        "description": "Some information to second QR code.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
-      },
-      "baseAddress": {
-        "sectionName": "BaseAddress",
-        "type": "string",
-        "description": "Schema, host and port of OEC.",
-        "configLevel": "Application",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
-      },
-      "bigFontDisable": {
-        "sectionName": "BigFontDisable",
-        "type": "string",
-        "description": "Big font disable printer sequence.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1D\\x21\\x00",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinOpt",
-          "APos",
-          "WinSco"
-        ]
-      },
-      "bigFontEnable": {
-        "sectionName": "BigFontEnable",
-        "type": "string",
-        "description": "Big font enable printer sequence.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1D\\x21\\x01",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinOpt",
-          "APos",
-          "WinSco"
-        ]
-      },
-      "boldDisable": {
-        "sectionName": "BoldDisable",
-        "type": "string",
-        "description": "Bold disable printer sequence.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1B\\x21\\x00",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinOpt",
-          "APos",
-          "WinSco"
-        ]
-      },
-      "boldEnable": {
-        "sectionName": "BoldEnable",
-        "type": "string",
-        "description": "Bold enable printer sequence.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1B\\x21\\x18",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
-      },
-      "cashRegisterCode": {
-        "sectionName": "CashRegisterCode",
-        "type": "string",
-        "description": "Cash register code.",
-        "configLevel": "Application",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
-      },
-      "centerTextDisable": {
-        "sectionName": "DisableCenterText",
-        "type": "string",
-        "description": "Sequence to disable centered text.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1B\\x61\\x00",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinOpt",
-          "APos",
-          "WinSco"
-        ]
-      },
-      "centerTextEnable": {
-        "sectionName": "CenterTextEnable",
-        "type": "string",
-        "description": "Sequence to enable centered text.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1B\\x61\\x01",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "WinOpt",
-          "APos",
-          "WinSco"
-        ]
-      },
-      "emailReceiptRenderer": {
-        "sectionName": "EmailReceiptRenderer",
-        "type": "boolean",
-        "description": "Email receipt renderer.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
-      },
-      "freePrintFeedLines": {
-        "sectionName": "FreePrintFeedLines",
-        "type": "number",
-        "description": "How many lines should be fed after free print.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
-      },
-      "oecLocation": {
-        "sectionName": "OECLocation",
-        "type": "object",
-        "description": "Location of OEC.",
-        "configLevel": "Application",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "paperWidth": {
-        "sectionName": "PaperWidth",
-        "type": "string",
-        "description": "Paper width for printing.",
-        "configLevel": "Application",
-        "defaultValue": "",
-        "changeType": "Restart",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "qrCodeSequence": {
-        "sectionName": "QrCodeSequence",
-        "type": "string",
-        "description": "Fiscal UUID QR code printer sequence.",
-        "configLevel": "Merchant",
-        "defaultValue": "\\x1B\\x61\\x31\\x1D\\x28\\x6B\\x04\\x00\\x31\\x41\\x32\\x00\\x1D\\x28\\x6B\\x03\\x00\\x31\\x43\\x05\\x1D\\x28\\x6B\\x03\\x00\\x31\\x45\\x31\\x1D\\x28\\x6B[len:16]\\x31\\x50\\x30[code]\\x1D\\x28\\x6B\\x03\\x00\\x31\\x51\\x30\\x1B\\x61\\x30",
-        "changeType": "Restart",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt",
-          "WinSco"
-        ]
+    },
+    "mopConfiguration": {
+      "type": "object",
+      "description": "Configuration for mop setup.",
+      "properties": {
+        "allowedMopCodes": {
+          "type": "object",
+          "description": "List of allowed MoP codes. If empty, all MoP codes are allowed."
+        },
+        "fleetCardsParsingMethods": {
+          "type": "object",
+          "description": "Custom mapping for fleet cards data parsing (customer, license plate, etc.) (temporary solution). Mapping is defined by pair Issuer.Code and Parsing method. This definition should be moved into card issuer definition."
+        },
+        "mopTerminalAssignment": {
+          "type": "object",
+          "description": "MOP to terminal assignment."
+        }
       }
-    }
-  },
-  "platformSettings": {
-    "sectionName": "PlatformSettings",
-    "type": "object",
-    "description": "Application settings.",
-    "configLevel": "Merchant",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "healthUrl": {
-        "sectionName": "HealthUrl",
-        "type": "string",
-        "description": "Platform URL for checking platform state.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
+    },
+    "oecOptions": {
+      "type": "object",
+      "description": "FisCat options for fiscal setup.",
+      "properties": {
+        "additionalQrCodeInfo": {
+          "type": "string",
+          "description": "Some information to second QR code."
+        },
+        "baseAddress": {
+          "type": "string",
+          "description": "Schema, host and port of OEC."
+        },
+        "bigFontDisable": {
+          "type": "string",
+          "description": "Big font disable printer sequence.",
+          "default": "\\x1D\\x21\\x00"
+        },
+        "bigFontEnable": {
+          "type": "string",
+          "description": "Big font enable printer sequence.",
+          "default": "\\x1D\\x21\\x01"
+        },
+        "boldDisable": {
+          "type": "string",
+          "description": "Bold disable printer sequence.",
+          "default": "\\x1B\\x21\\x00"
+        },
+        "boldEnable": {
+          "type": "string",
+          "description": "Bold enable printer sequence.",
+          "default": "\\x1B\\x21\\x18"
+        },
+        "cashRegisterCode": {
+          "type": "string",
+          "description": "Cash register code."
+        },
+        "centerTextDisable": {
+          "type": "string",
+          "description": "Sequence to disable centered text.",
+          "default": "\\x1B\\x61\\x00"
+        },
+        "centerTextEnable": {
+          "type": "string",
+          "description": "Sequence to enable centered text.",
+          "default": "\\x1B\\x61\\x01"
+        },
+        "emailReceiptRenderer": {
+          "type": "boolean",
+          "description": "Email receipt renderer."
+        },
+        "freePrintFeedLines": {
+          "type": "number",
+          "description": "How many lines should be fed after free print."
+        },
+        "oecLocation": {
+          "type": "object",
+          "description": "Location of OEC."
+        },
+        "paperWidth": {
+          "type": "string",
+          "description": "Paper width for printing."
+        },
+        "qrCodeSequence": {
+          "type": "string",
+          "description": "Fiscal UUID QR code printer sequence.",
+          "default": "\\x1B\\x61\\x31\\x1D\\x28\\x6B\\x04\\x00\\x31\\x41\\x32\\x00\\x1D\\x28\\x6B\\x03\\x00\\x31\\x43\\x05\\x1D\\x28\\x6B\\x03\\x00\\x31\\x45\\x31\\x1D\\x28\\x6B[len:16]\\x31\\x50\\x30[code]\\x1D\\x28\\x6B\\x03\\x00\\x31\\x51\\x30\\x1B\\x61\\x30"
+        }
       }
-    }
-  },
-  "posApi": {
-    "sectionName": "PosApi",
-    "type": "object",
-    "description": "PosApi settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ],
-    "properties": {
-      "port": {
-        "sectionName": "Port",
-        "type": "number",
-        "description": "Port.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
+    },
+    "platformSettings": {
+      "type": "object",
+      "description": "Application settings.",
+      "properties": {
+        "healthUrl": {
+          "type": "string",
+          "description": "Platform URL for checking platform state."
+        }
       }
-    }
-  },
-  "recovery": {
-    "sectionName": "Recovery",
-    "type": "object",
-    "description": "Recovery settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "cash": {
-        "sectionName": "Cash",
-        "type": "number",
-        "description": "Cash recovery Id.",
-        "configLevel": "Merchant",
-        "defaultValue": "0",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "closure": {
-        "sectionName": "Closure",
-        "type": "number",
-        "description": "Closure recovery Id.",
-        "configLevel": "Merchant",
-        "defaultValue": "0",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "sales": {
-        "sectionName": "Sales",
-        "type": "number",
-        "description": "Sales recovery Id.",
-        "configLevel": "Merchant",
-        "defaultValue": "0",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
+    },
+    "posApi": {
+      "type": "object",
+      "description": "PosApi settings.",
+      "properties": {
+        "port": {
+          "type": "number",
+          "description": "Port."
+        }
       }
-    }
-  },
-  "salesSetting": {
-    "sectionName": "SalesSettings",
-    "type": "object",
-    "description": "Sales settings for application.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinPos",
-      "WinSco",
-      "WinOpt"
-    ],
-    "properties": {
-      "bankCardMode": {
-        "sectionName": "BankCardMode",
-        "type": "number",
-        "description": "Bank card mode.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "defaultCancellationReason": {
-        "sectionName": "DefaultCancellationReason",
-        "type": "string",
-        "description": "Default cancellation reason.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos"
-        ]
-      },
-      "doubleVat": {
-        "sectionName": "DoubleVat",
-        "type": "number",
-        "description": "Type of double vat.",
-        "configLevel": "Merchant",
-        "defaultValue": "1",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos"
-        ]
-      },
-      "includePrintout": {
-        "sectionName": "IncludePrintout",
-        "type": "boolean",
-        "description": "Indicates if printout should be included in business documents (sales transaction, closure, etc.).",
-        "configLevel": "Merchant",
-        "defaultValue": "true",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "receiptTailMessage": {
-        "sectionName": "ReceiptTailMessage",
-        "type": "object",
-        "description": "Lines of custom receipt tail message.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "APos",
-          "WinOpt"
-        ]
+    },
+    "recovery": {
+      "type": "object",
+      "description": "Recovery settings.",
+      "properties": {
+        "cash": {
+          "type": "number",
+          "description": "Cash recovery Id.",
+          "default": "0"
+        },
+        "closure": {
+          "type": "number",
+          "description": "Closure recovery Id.",
+          "default": "0"
+        },
+        "sales": {
+          "type": "number",
+          "description": "Sales recovery Id.",
+          "default": "0"
+        }
       }
-    }
-  },
-  "siteControllerConfiguration": {
-    "sectionName": "siteControllerConfiguration",
-    "type": "object",
-    "description": "Site controller configuration.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos"
-    ],
-    "properties": {
-      "baseUrl": {
-        "sectionName": "BaseUrl",
-        "type": "string",
-        "description": "Site controller hub URL.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "fuelPointTotalsTimeout": {
-        "sectionName": "FuelPointTotalsTimeout",
-        "type": "number",
-        "description": "Fuel point totals timeout.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
-      },
-      "hubReconnectDelay": {
-        "sectionName": "HubReconnectDelay",
-        "type": "number",
-        "description": "Site controller hub reconnect delay in milliseconds.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt"
-        ]
-      },
-      "reloadViewDelay": {
-        "sectionName": "ReloadViewDelay",
-        "type": "number",
-        "description": "Reload view delay in milliseconds.",
-        "configLevel": "Merchant",
-        "defaultValue": "350",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "APos",
-          "WinOpt"
-        ]
+    },
+    "salesSetting": {
+      "type": "object",
+      "description": "Sales settings for application.",
+      "properties": {
+        "bankCardMode": {
+          "type": "number",
+          "description": "Bank card mode."
+        },
+        "defaultCancellationReason": {
+          "type": "string",
+          "description": "Default cancellation reason."
+        },
+        "doubleVat": {
+          "type": "number",
+          "description": "Type of double vat.",
+          "default": "1"
+        },
+        "includePrintout": {
+          "type": "boolean",
+          "description": "Indicates if printout should be included in business documents (sales transaction, closure, etc.).",
+          "default": "true"
+        },
+        "receiptTailMessage": {
+          "type": "object",
+          "description": "Lines of custom receipt tail message."
+        }
       }
-    }
-  },
-  "stornoSettings": {
-    "sectionName": "StornoSettings",
-    "type": "object",
-    "description": "Storno settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ],
-    "properties": {
-      "ignoreOriginalFiscalCode": {
-        "sectionName": "IgnoreOriginalFiscalCode",
-        "type": "boolean",
-        "description": "Define if original fiscal code is required for storno.",
-        "configLevel": "Merchant",
-        "defaultValue": "false",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
+    },
+    "siteControllerConfiguration": {
+      "type": "object",
+      "description": "Site controller configuration.",
+      "properties": {
+        "baseUrl": {
+          "type": "string",
+          "description": "Site controller hub URL."
+        },
+        "fuelPointTotalsTimeout": {
+          "type": "number",
+          "description": "Fuel point totals timeout."
+        },
+        "hubReconnectDelay": {
+          "type": "number",
+          "description": "Site controller hub reconnect delay in milliseconds."
+        },
+        "reloadViewDelay": {
+          "type": "number",
+          "description": "Reload view delay in milliseconds.",
+          "default": "350"
+        }
       }
-    }
-  },
-  "telemetry": {
-    "sectionName": "Telemetry",
-    "type": "object",
-    "description": "Telemetry Configuration.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos"
-    ],
-    "properties": {
-      "connectionString": {
-        "sectionName": "ConnectionString",
-        "type": "string",
-        "description": "Connection Config.",
-        "configLevel": "Location",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos"
-        ]
+    },
+    "stornoSettings": {
+      "type": "object",
+      "description": "Storno settings.",
+      "properties": {
+        "ignoreOriginalFiscalCode": {
+          "type": "boolean",
+          "description": "Define if original fiscal code is required for storno.",
+          "default": "false"
+        }
       }
-    }
-  },
-  "tomra": {
-    "sectionName": "Tomra",
-    "type": "object",
-    "description": "Tomra settings.",
-    "configLevel": "Location",
-    "defaultValue": "",
-    "changeType": "Automatic",
-    "usedByApps": [
-      "APos",
-      "WinOpt",
-      "WinPos",
-      "WinSco"
-    ],
-    "properties": {
-      "active": {
-        "sectionName": "Active",
-        "type": "boolean",
-        "description": "True if TOMRA is active, otherwise false.",
-        "configLevel": "Location",
-        "defaultValue": "false",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos",
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "ignoreStoreId": {
-        "sectionName": "IgnoreStoreId",
-        "type": "boolean",
-        "description": "True if TOMRA store id should be ignored, otherwise false.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "prefix": {
-        "sectionName": "Prefix",
-        "type": "string",
-        "description": "TOMRA prefix.",
-        "configLevel": "Merchant",
-        "defaultValue": "981",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos",
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "productNumber": {
-        "sectionName": "ProductNumber",
-        "type": "string",
-        "description": "TOMRA product number.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos",
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "refundEnabled": {
-        "sectionName": "RefundEnabled",
-        "type": "boolean",
-        "description": "True if TOMRA refund is available, otherwise false.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
-      },
-      "storeId": {
-        "sectionName": "StoreId",
-        "type": "string",
-        "description": "TOMRA store id.",
-        "configLevel": "Merchant",
-        "defaultValue": "",
-        "changeType": "Automatic",
-        "usedByApps": [
-          "APos",
-          "WinPos",
-          "WinSco",
-          "WinOpt"
-        ]
+    },
+    "telemetry": {
+      "type": "object",
+      "description": "Telemetry Configuration.",
+      "properties": {
+        "connectionString": {
+          "type": "string",
+          "description": "Connection Config."
+        }
+      }
+    },
+    "tomra": {
+      "type": "object",
+      "description": "Tomra settings.",
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "description": "True if TOMRA is active, otherwise false.",
+          "default": "false"
+        },
+        "ignoreStoreId": {
+          "type": "boolean",
+          "description": "True if TOMRA store id should be ignored, otherwise false."
+        },
+        "prefix": {
+          "type": "string",
+          "description": "TOMRA prefix.",
+          "default": "981"
+        },
+        "productNumber": {
+          "type": "string",
+          "description": "TOMRA product number."
+        },
+        "refundEnabled": {
+          "type": "boolean",
+          "description": "True if TOMRA refund is available, otherwise false."
+        },
+        "storeId": {
+          "type": "string",
+          "description": "TOMRA store id."
+        }
       }
     }
   }
