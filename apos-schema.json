@@ -6,152 +6,152 @@
   "properties": {
     "behavior": {
       "type": "object",
-      "description": "Device Behavior Configuration.",
+      "description": "Device Behavior Configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "automaticDeviceRestart": {
           "type": "boolean",
-          "description": "Automatic Device Restart Config."
+          "description": "Automatic Device Restart Config.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         },
         "automaticDeviceRestartTime": {
           "type": "string",
-          "description": "Automatic Device Restart Time Config."
+          "description": "Automatic Device Restart Time Config.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         },
         "maxItemsPerSynchronizationCycle": {
           "type": "number",
-          "description": "Max Items Per Synchronization Cycle Config."
+          "description": "Max Items Per Synchronization Cycle Config.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         }
       }
     },
     "cashDrawerConfiguration": {
       "type": "object",
-      "description": "Cash drawer configuration.",
+      "description": "Cash drawer configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos\n\n*Recommended config level:* Location",
       "properties": {
         "openCashDrawerMode": {
           "type": "number",
-          "description": "Open cash drawer mode.",
+          "description": "Open cash drawer mode.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos\n\n*Recommended config level:* Location",
           "default": "3"
         }
       }
     },
     "closureSettings": {
       "type": "object",
-      "description": "Definition for closure process.",
+      "description": "Definition for closure process.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Location",
       "properties": {
         "closureConfigurations": {
           "type": "object",
-          "description": "Definition for closure process.",
+          "description": "Definition for closure process.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Location",
           "properties": {
             "autoEndShift": {
               "type": "boolean",
-              "description": "Indicates if shift should be ended automatically."
+              "description": "Indicates if shift should be ended automatically.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "autoStartShift": {
               "type": "boolean",
-              "description": "Indicates if shift should be started automatically."
+              "description": "Indicates if shift should be started automatically.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "automatedDeposit": {
               "type": "boolean",
-              "description": "Indicates if initial deposit should be made automatically."
+              "description": "Indicates if initial deposit should be made automatically.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "automatedDepositAmount": {
               "type": "object",
-              "description": "Amounts of automated deposit."
+              "description": "Amounts of automated deposit.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "automatedWithdrawal": {
               "type": "boolean",
-              "description": "Indicates if there should be made automated cash withdrawal after closure."
+              "description": "Indicates if there should be made automated cash withdrawal after closure.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "automaticallyCloseShiftBeforeFiscal": {
               "type": "boolean",
-              "description": "Indicates if shift should be closed automatically before fiscal day."
+              "description": "Indicates if shift should be closed automatically before fiscal day.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "cashCurrencies": {
               "type": "object",
-              "description": "Currency ISO codes which should be included in closure."
+              "description": "Currency ISO codes which should be included in closure.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "depositCashMovementTypeCode": {
               "type": "string",
-              "description": "Cash movement type code which should be used for initial deposit."
+              "description": "Cash movement type code which should be used for initial deposit.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "fiscalDayCloseMode": {
               "type": "string",
-              "description": "Fiscal day close mode."
+              "description": "Fiscal day close mode.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "fiscalDayOpenMode": {
               "type": "string",
-              "description": "Fiscal day open mode."
+              "description": "Fiscal day open mode.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "maxCashCountAttempts": {
               "type": "number",
-              "description": "Maximum count of entering wrong counted MOPs."
+              "description": "Maximum count of entering wrong counted MOPs.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "minimalCashBalance": {
               "type": "object",
-              "description": "Minimal amount which should be in cash location after closure."
+              "description": "Minimal amount which should be in cash location after closure.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "minimalDeposit": {
               "type": "object",
-              "description": "Minimal amount of specific currency which should be in cash location when closure was started."
+              "description": "Minimal amount of specific currency which should be in cash location when closure was started.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Location"
             },
             "minimalDepositOverride": {
               "type": "boolean",
-              "description": "Indicates if closure can be started with cash amount below minimal deposit."
+              "description": "Indicates if closure can be started with cash amount below minimal deposit.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "mops": {
               "type": "object",
-              "description": "Methods of payment configuration."
+              "description": "Methods of payment configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "period": {
               "type": "string",
-              "description": "Closure configuration period enumeration."
+              "description": "Closure configuration period enumeration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "runType": {
               "type": "string",
-              "description": "Closure configuration run type enumeration."
+              "description": "Closure configuration run type enumeration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "saleOnlySameCashier": {
               "type": "boolean",
-              "description": "Indicates if only cashier which open day can sell."
+              "description": "Indicates if only cashier which open day can sell.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "scheduleDays": {
               "type": "object",
-              "description": "Schedule days configuration."
+              "description": "Schedule days configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "scheduleTime": {
               "type": "string",
-              "description": "Schedule time configuration."
+              "description": "Schedule time configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "scheduledStartAutomated": {
               "type": "boolean",
-              "description": "Indicates if scheduled start is automated."
+              "description": "Indicates if scheduled start is automated.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "scheduledStartTime": {
               "type": "string",
-              "description": "Scheduled start time."
+              "description": "Scheduled start time.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "status": {
               "type": "string",
-              "description": "Closure configuration status enumeration."
+              "description": "Closure configuration status enumeration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "type": {
               "type": "string",
-              "description": "Closure configuration type enumeration."
+              "description": "Closure configuration type enumeration.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "warningBefore": {
               "type": "string",
-              "description": "Warning before closure time."
+              "description": "Warning before closure time.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "withdrawalCashMovementTypeCode": {
               "type": "string",
-              "description": "Cash movement type code which should be used for cash withdrawal after closure."
+              "description": "Cash movement type code which should be used for cash withdrawal after closure.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "withdrawalLimit": {
               "type": "object",
-              "description": "Withdrawal limit amounts."
+              "description": "Withdrawal limit amounts.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             },
             "withdrawalMandatory": {
               "type": "boolean",
-              "description": "Indicates if cash withdrawal is required after closure."
+              "description": "Indicates if cash withdrawal is required after closure.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Location"
             }
           }
         }
@@ -159,371 +159,371 @@
     },
     "couponNumberMatchPattern": {
       "type": "string",
-      "description": "Coupon Number Match Pattern."
+      "description": "Coupon Number Match Pattern.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
     },
     "customerApiSettings": {
       "type": "object",
-      "description": "Customer external api settings.",
+      "description": "Customer external api settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Location",
       "properties": {
         "baseUrl": {
           "type": "string",
-          "description": "Base url."
+          "description": "Base url.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "customerDisplayConfiguration": {
       "type": "object",
-      "description": "Customer Display settings.",
+      "description": "Customer Display settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "adsConfiguration": {
           "type": "object",
-          "description": "Ads Configuration.",
+          "description": "Ads Configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
           "properties": {
             "checkingInterval": {
               "type": "string",
-              "description": "Checking Interval"
+              "description": "Checking Interval\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "idleScreenTimeout": {
               "type": "string",
-              "description": "Idle Screen Timeout"
+              "description": "Idle Screen Timeout\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "mediaApiUrl": {
               "type": "string",
-              "description": "Media api url"
+              "description": "Media api url\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             },
             "rotationInterval": {
               "type": "string",
-              "description": "Rotation Interval"
+              "description": "Rotation Interval\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
             }
           }
         },
         "customerDisplayBg": {
           "type": "string",
-          "description": "Customer display background image."
+          "description": "Customer display background image.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         }
       }
     },
     "discountConfiguration": {
       "type": "object",
-      "description": "Discount configuration for application.",
+      "description": "Discount configuration for application.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinSco\n\n*Recommended config level:* Location",
       "properties": {
         "discountEngines": {
           "type": "object",
-          "description": "List of available discount engines."
+          "description": "List of available discount engines.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "discountEnginesCombinations": {
           "type": "object",
-          "description": "Discount engines combinations matrix."
+          "description": "Discount engines combinations matrix.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "discountServiceResponseTimeout": {
           "type": "number",
-          "description": "Timeout for discount server response in milliseconds.",
+          "description": "Timeout for discount server response in milliseconds.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "5000"
         },
         "discountServiceUrl": {
           "type": "string",
-          "description": "Discount service URL."
+          "description": "Discount service URL.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "eventBus": {
       "type": "object",
-      "description": "Event bus settings.",
+      "description": "Event bus settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Merchant",
       "properties": {
         "host": {
           "type": "string",
-          "description": "RabbitMQ server host name."
+          "description": "RabbitMQ server host name.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "platformExchange": {
           "type": "string",
-          "description": "Platform Exchange."
+          "description": "Platform Exchange.\n\n*Change type:* Restart\n\n*Used by apps:* APos\n\n*Recommended config level:* Merchant"
         },
         "port": {
           "type": "number",
-          "description": "RabbitMQ server port."
+          "description": "RabbitMQ server port.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "retryCount": {
           "type": "number",
-          "description": "Number of retries on failure.",
+          "description": "Number of retries on failure.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "5"
         },
         "tlsPort": {
           "type": "number",
-          "description": "Tls port."
+          "description": "Tls port.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "tlsServerName": {
           "type": "string",
-          "description": "Tls server name."
+          "description": "Tls server name.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "useTls": {
           "type": "boolean",
-          "description": "True when use tls.",
+          "description": "True when use tls.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "false"
         },
         "virtualHost": {
           "type": "string",
-          "description": "RabbitMQ server virtual host."
+          "description": "RabbitMQ server virtual host.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "forecourtConfiguration": {
       "type": "object",
-      "description": "Forecourt Configuration.",
+      "description": "Forecourt Configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "dispenserSalesPriceMismatchHandle": {
           "type": "object",
-          "description": "Dispenser Sales Price Mismatc hHandle Configuration."
+          "description": "Dispenser Sales Price Mismatc hHandle Configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         },
         "dispenserTotalPriceMismatchHandle": {
           "type": "object",
-          "description": "Dispenser Total Price Mismatch Handle Configuration."
+          "description": "Dispenser Total Price Mismatch Handle Configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         }
       }
     },
     "jarvisSettings": {
       "type": "object",
-      "description": "PoN - Jarvis settings.",
+      "description": "PoN - Jarvis settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Location",
       "properties": {
         "baseUrl": {
           "type": "string",
-          "description": "Base URL of Jarvis API."
+          "description": "Base URL of Jarvis API.\n\n*Change type:* Automatic\n\n*Used by apps:* WinSco, APos\n\n*Recommended config level:* Application"
         },
         "timeoutInMilliseconds": {
           "type": "number",
-          "description": "Timeout in milliseconds for requests to Jarvis API.",
+          "description": "Timeout in milliseconds for requests to Jarvis API.\n\n*Change type:* Automatic\n\n*Used by apps:* WinSco, APos\n\n*Recommended config level:* Merchant",
           "default": "5000"
         }
       }
     },
     "mopConfiguration": {
       "type": "object",
-      "description": "Configuration for mop setup.",
+      "description": "Configuration for mop setup.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos, WinOpt\n\n*Recommended config level:* Location",
       "properties": {
         "allowedMopCodes": {
           "type": "object",
-          "description": "List of allowed MoP codes. If empty, all MoP codes are allowed."
+          "description": "List of allowed MoP codes. If empty, all MoP codes are allowed.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos\n\n*Recommended config level:* Application"
         },
         "fleetCardsParsingMethods": {
           "type": "object",
-          "description": "Custom mapping for fleet cards data parsing (customer, license plate, etc.) (temporary solution). Mapping is defined by pair Issuer.Code and Parsing method. This definition should be moved into card issuer definition."
+          "description": "Custom mapping for fleet cards data parsing (customer, license plate, etc.) (temporary solution). Mapping is defined by pair Issuer.Code and Parsing method. This definition should be moved into card issuer definition.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "mopTerminalAssignment": {
           "type": "object",
-          "description": "MOP to terminal assignment."
+          "description": "MOP to terminal assignment.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "oecOptions": {
       "type": "object",
-      "description": "FisCat options for fiscal setup.",
+      "description": "FisCat options for fiscal setup.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Application",
       "properties": {
         "additionalQrCodeInfo": {
           "type": "string",
-          "description": "Some information to second QR code."
+          "description": "Some information to second QR code.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Merchant"
         },
         "baseAddress": {
           "type": "string",
-          "description": "Schema, host and port of OEC."
+          "description": "Schema, host and port of OEC.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Application"
         },
         "bigFontDisable": {
           "type": "string",
-          "description": "Big font disable printer sequence.",
+          "description": "Big font disable printer sequence.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinOpt, APos, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1D\\x21\\x00"
         },
         "bigFontEnable": {
           "type": "string",
-          "description": "Big font enable printer sequence.",
+          "description": "Big font enable printer sequence.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinOpt, APos, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1D\\x21\\x01"
         },
         "boldDisable": {
           "type": "string",
-          "description": "Bold disable printer sequence.",
+          "description": "Bold disable printer sequence.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinOpt, APos, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1B\\x21\\x00"
         },
         "boldEnable": {
           "type": "string",
-          "description": "Bold enable printer sequence.",
+          "description": "Bold enable printer sequence.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1B\\x21\\x18"
         },
         "cashRegisterCode": {
           "type": "string",
-          "description": "Cash register code."
+          "description": "Cash register code.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Application"
         },
         "centerTextDisable": {
           "type": "string",
-          "description": "Sequence to disable centered text.",
+          "description": "Sequence to disable centered text.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinOpt, APos, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1B\\x61\\x00"
         },
         "centerTextEnable": {
           "type": "string",
-          "description": "Sequence to enable centered text.",
+          "description": "Sequence to enable centered text.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, WinOpt, APos, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1B\\x61\\x01"
         },
         "emailReceiptRenderer": {
           "type": "boolean",
-          "description": "Email receipt renderer."
+          "description": "Email receipt renderer.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Merchant"
         },
         "freePrintFeedLines": {
           "type": "number",
-          "description": "How many lines should be fed after free print."
+          "description": "How many lines should be fed after free print.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Merchant"
         },
         "oecLocation": {
           "type": "object",
-          "description": "Location of OEC."
+          "description": "Location of OEC.\n\n*Change type:* Restart\n\n*Used by apps:* APos\n\n*Recommended config level:* Application"
         },
         "paperWidth": {
           "type": "string",
-          "description": "Paper width for printing."
+          "description": "Paper width for printing.\n\n*Change type:* Restart\n\n*Used by apps:* APos\n\n*Recommended config level:* Application"
         },
         "qrCodeSequence": {
           "type": "string",
-          "description": "Fiscal UUID QR code printer sequence.",
+          "description": "Fiscal UUID QR code printer sequence.\n\n*Change type:* Restart\n\n*Used by apps:* WinPos, APos, WinOpt, WinSco\n\n*Recommended config level:* Merchant",
           "default": "\\x1B\\x61\\x31\\x1D\\x28\\x6B\\x04\\x00\\x31\\x41\\x32\\x00\\x1D\\x28\\x6B\\x03\\x00\\x31\\x43\\x05\\x1D\\x28\\x6B\\x03\\x00\\x31\\x45\\x31\\x1D\\x28\\x6B[len:16]\\x31\\x50\\x30[code]\\x1D\\x28\\x6B\\x03\\x00\\x31\\x51\\x30\\x1B\\x61\\x30"
         }
       }
     },
     "platformSettings": {
       "type": "object",
-      "description": "Application settings.",
+      "description": "Application settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Merchant",
       "properties": {
         "healthUrl": {
           "type": "string",
-          "description": "Platform URL for checking platform state."
+          "description": "Platform URL for checking platform state.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "posApi": {
       "type": "object",
-      "description": "PosApi settings.",
+      "description": "PosApi settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "port": {
           "type": "number",
-          "description": "Port."
+          "description": "Port.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "recovery": {
       "type": "object",
-      "description": "Recovery settings.",
+      "description": "Recovery settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Location",
       "properties": {
         "cash": {
           "type": "number",
-          "description": "Cash recovery Id.",
+          "description": "Cash recovery Id.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "0"
         },
         "closure": {
           "type": "number",
-          "description": "Closure recovery Id.",
+          "description": "Closure recovery Id.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "0"
         },
         "sales": {
           "type": "number",
-          "description": "Sales recovery Id.",
+          "description": "Sales recovery Id.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "0"
         }
       }
     },
     "salesSetting": {
       "type": "object",
-      "description": "Sales settings for application.",
+      "description": "Sales settings for application.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos, WinSco, WinOpt\n\n*Recommended config level:* Location",
       "properties": {
         "bankCardMode": {
           "type": "number",
-          "description": "Bank card mode."
+          "description": "Bank card mode.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "defaultCancellationReason": {
           "type": "string",
-          "description": "Default cancellation reason."
+          "description": "Default cancellation reason.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos\n\n*Recommended config level:* Merchant"
         },
         "doubleVat": {
           "type": "number",
-          "description": "Type of double vat.",
+          "description": "Type of double vat.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos\n\n*Recommended config level:* Merchant",
           "default": "1"
         },
         "includePrintout": {
           "type": "boolean",
-          "description": "Indicates if printout should be included in business documents (sales transaction, closure, etc.).",
+          "description": "Indicates if printout should be included in business documents (sales transaction, closure, etc.).\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinSco, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "true"
         },
         "receiptTailMessage": {
           "type": "object",
-          "description": "Lines of custom receipt tail message."
+          "description": "Lines of custom receipt tail message.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, APos, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     },
     "siteControllerConfiguration": {
       "type": "object",
-      "description": "Site controller configuration.",
+      "description": "Site controller configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos\n\n*Recommended config level:* Location",
       "properties": {
         "baseUrl": {
           "type": "string",
-          "description": "Site controller hub URL."
+          "description": "Site controller hub URL.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinOpt\n\n*Recommended config level:* Location"
         },
         "fuelPointTotalsTimeout": {
           "type": "number",
-          "description": "Fuel point totals timeout."
+          "description": "Fuel point totals timeout.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Merchant"
         },
         "hubReconnectDelay": {
           "type": "number",
-          "description": "Site controller hub reconnect delay in milliseconds."
+          "description": "Site controller hub reconnect delay in milliseconds.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "reloadViewDelay": {
           "type": "number",
-          "description": "Reload view delay in milliseconds.",
+          "description": "Reload view delay in milliseconds.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, APos, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "350"
         }
       }
     },
     "stornoSettings": {
       "type": "object",
-      "description": "Storno settings.",
+      "description": "Storno settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "ignoreOriginalFiscalCode": {
           "type": "boolean",
-          "description": "Define if original fiscal code is required for storno.",
+          "description": "Define if original fiscal code is required for storno.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Merchant",
           "default": "false"
         }
       }
     },
     "telemetry": {
       "type": "object",
-      "description": "Telemetry Configuration.",
+      "description": "Telemetry Configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "connectionString": {
           "type": "string",
-          "description": "Connection Config."
+          "description": "Connection Config.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         }
       }
     },
     "tomra": {
       "type": "object",
-      "description": "Tomra settings.",
+      "description": "Tomra settings.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinOpt, WinPos, WinSco\n\n*Recommended config level:* Location",
       "properties": {
         "active": {
           "type": "boolean",
-          "description": "True if TOMRA is active, otherwise false.",
+          "description": "True if TOMRA is active, otherwise false.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos, WinSco, WinOpt\n\n*Recommended config level:* Location",
           "default": "false"
         },
         "ignoreStoreId": {
           "type": "boolean",
-          "description": "True if TOMRA store id should be ignored, otherwise false."
+          "description": "True if TOMRA store id should be ignored, otherwise false.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "prefix": {
           "type": "string",
-          "description": "TOMRA prefix.",
+          "description": "TOMRA prefix.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos, WinSco, WinOpt\n\n*Recommended config level:* Merchant",
           "default": "981"
         },
         "productNumber": {
           "type": "string",
-          "description": "TOMRA product number."
+          "description": "TOMRA product number.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "refundEnabled": {
           "type": "boolean",
-          "description": "True if TOMRA refund is available, otherwise false."
+          "description": "True if TOMRA refund is available, otherwise false.\n\n*Change type:* Automatic\n\n*Used by apps:* WinPos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         },
         "storeId": {
           "type": "string",
-          "description": "TOMRA store id."
+          "description": "TOMRA store id.\n\n*Change type:* Automatic\n\n*Used by apps:* APos, WinPos, WinSco, WinOpt\n\n*Recommended config level:* Merchant"
         }
       }
     }
