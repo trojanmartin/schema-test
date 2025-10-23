@@ -2313,6 +2313,10 @@
 						"null"
 					],
 					"description": "Additional qr code info.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"ValidateCashierVatIdentifier": {
+					"type": "boolean",
+					"description": "Validate cashier vat identifier.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				}
 			},
 			"description": "Fiscal module options."
