@@ -242,6 +242,13 @@
 				"LoyaltyCoupons": {
 					"$ref": "#/$defs/iReadOnlyListOfLoyaltyCouponDefinition",
 					"description": "Generally allowed loyalty coupons, for all loyalty cards.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
+				},
+				"PointsEarnedErrorMessage": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Points earned error message, when is problem with earn points.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
 				}
 			},
 			"description": "Loyalty system configuration.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
@@ -480,6 +487,21 @@
 						"null"
 					],
 					"description": "Platform URL for checking platform state.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
+				},
+				"HealthTimeout": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "When checking platform health, this is health timeout for response.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "00:00:05"
+				},
+				"OutgoingTimeout": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Timeout for outgoing request to platform. This is used for ST, FT, CM, CLosure and other operations that whe sending into the platform.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "00:00:10"
+				},
+				"SessionTimeout": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Timeout for session request to platform.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`,`WinSCO`\n",
+					"default": "00:00:10"
 				}
 			},
 			"description": "Application settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
@@ -495,12 +517,80 @@
 					"type": "boolean",
 					"description": "True if telemetry enabled, otherwise false for disabled.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
 					"default": false
+				},
+				"MetricsEnabled": {
+					"type": "boolean",
+					"description": "True if metrics are enabled, otherwise false.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": true
+				},
+				"MetricReaderExportIntervalMilliseconds": {
+					"type": "integer",
+					"description": "Metric reader export interval in milliseconds.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 60000
+				},
+				"MetricReaderExportTimeoutMilliseconds": {
+					"type": "integer",
+					"description": "Metric reader export timeout in milliseconds.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 30000
+				},
+				"LoggingEnabled": {
+					"type": "boolean",
+					"description": "True if logging is enabled, otherwise false.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": true
+				},
+				"LogExporterMaxQueueSize": {
+					"type": "integer",
+					"description": "Log exporter maximum queue size.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 2048
+				},
+				"LogExporterScheduledDelayMilliseconds": {
+					"type": "integer",
+					"description": "Log exporter scheduled delay in milliseconds.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 5000
+				},
+				"LogExporterTimeoutMilliseconds": {
+					"type": "integer",
+					"description": "Log exporter timeout in milliseconds.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 30000
+				},
+				"LogExporterMaxExportBatchSize": {
+					"type": "integer",
+					"description": "Log exporter maximum export batch size.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 512
+				},
+				"TracingEnabled": {
+					"type": "boolean",
+					"description": "True if tracing is enabled, otherwise false.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": true
+				},
+				"TraceExporterMaxQueueSize": {
+					"type": "integer",
+					"description": "Trace exporter maximum queue size.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 2048
+				},
+				"TraceExporterScheduledDelayMilliseconds": {
+					"type": "integer",
+					"description": "Trace exporter scheduled delay in milliseconds.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 5000
+				},
+				"TraceExporterTimeoutMilliseconds": {
+					"type": "integer",
+					"description": "Trace exporter timeout in milliseconds.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 30000
+				},
+				"TraceExporterMaxExportBatchSize": {
+					"type": "integer",
+					"description": "Trace exporter maximum export batch size.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 512
 				}
 			},
 			"description": "Telemetry settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
 		},
 		"SiteControllerConfiguration": {
-			"type": "object",
+			"type": [
+				"object",
+				"null"
+			],
 			"properties": {
 				"BaseUrl": {
 					"type": [
@@ -777,6 +867,21 @@
 					"type": "boolean",
 					"description": "Table management enabled.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
 					"default": false
+				},
+				"IgnoreCustomerInNonFiscalReceipts": {
+					"type": "boolean",
+					"description": "Ignore customer in non-fiscal receipts.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n",
+					"default": true
+				},
+				"SendReceiptsEmail": {
+					"type": "boolean",
+					"description": "Send receipt using email.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": false
+				},
+				"ShowForeignCurrencyReturn": {
+					"type": "boolean",
+					"description": "Show foreign currency return.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": true
 				}
 			},
 			"description": "Business settings.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
@@ -814,8 +919,8 @@
 			"properties": {
 				"MaxConcurrency": {
 					"type": "integer",
-					"description": "Max concurrency for background jobs.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
-					"default": 1
+					"description": "Max concurrency for background jobs.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
+					"default": 0
 				},
 				"JobSchedules": {
 					"description": "Dictionary storing parameters for every background job.\n \n*Recommended config level:* `Location`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
@@ -1015,6 +1120,48 @@
 						"description": "Discount information.\n \n*Used by apps:* `WinPOS`\n"
 					},
 					"description": "Array of available discount for basket.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+				},
+				"DualPrice": {
+					"type": [
+						"object",
+						"null"
+					],
+					"properties": {
+						"Enabled": {
+							"type": "boolean",
+							"description": "True if dual price discount is enabled, otherwise false.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+							"default": false
+						},
+						"DiscountArticelMappingCode": {
+							"type": [
+								"string",
+								"null"
+							],
+							"description": "Code of the mapping table, which should be used for discount article lookup, see description of mapping table bellow\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						},
+						"FleetCardServiceArticle": {
+							"type": [
+								"string",
+								"null"
+							],
+							"description": "Article ID which will be used for the Arksys request to “mark” the local customer, so it can be later identified in Arksys.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						},
+						"ExternalPromotionNumber": {
+							"type": [
+								"string",
+								"null"
+							],
+							"description": "Identifier of the discount which was provided to the local customer - will be send to SAP within the TransactionJournal (Sales transaction)/Discount object.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						},
+						"QuestionText": {
+							"type": [
+								"string",
+								"null"
+							],
+							"description": "A message which will open on the POS screen, when the “Discounted article” was fueled, and the dispenser’s transaction is to be added into the basket.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						}
+					},
+					"description": "Dual price information."
 				}
 			},
 			"description": "Available discount in pos.\n \n*Used by apps:* `WinPOS`\n"
@@ -1290,9 +1437,10 @@
 						"ECR_LoyaltyRits",
 						"OPP",
 						"MOL",
+						"General",
 						null
 					],
-					"$comment": "Undefined -> Undefined discount provider.\n \nManual -> Manual discount provider.\n \nECR_Loyalty -> ECR Loyalty.\n \nECR_Loyalty2 -> ECR Loyalty 2.\n \nJarvis -> Jarvis.\n \nPCS -> PCS.\n \nECR_LoyaltyRits -> ECR Rits.\n \nOPP -> OPP.\n \nMOL -> MOL.",
+					"$comment": "Undefined -> Undefined discount provider.\n \nManual -> Manual discount provider.\n \nECR_Loyalty -> ECR Loyalty.\n \nECR_Loyalty2 -> ECR Loyalty 2.\n \nJarvis -> Jarvis.\n \nPCS -> PCS.\n \nECR_LoyaltyRits -> ECR Rits.\n \nOPP -> OPP.\n \nMOL -> MOL.\n \nGeneral -> General.",
 					"description": "Provider type."
 				},
 				"LocalStationNumberMapping": {
@@ -1395,9 +1543,10 @@
 						"enum": [
 							"PrinterLowPaper",
 							"PrinterNoPaper",
-							"PrinterError"
+							"PrinterError",
+							"UnregisteredFiscalTransactions"
 						],
-						"$comment": "PrinterLowPaper -> Alert for printer low paper.\n \nPrinterNoPaper -> Alert for printer out of paper.\n \nPrinterError -> Alert for printer error.",
+						"$comment": "PrinterLowPaper -> Alert for printer low paper.\n \nPrinterNoPaper -> Alert for printer out of paper.\n \nPrinterError -> Alert for printer error.\n \nUnregisteredFiscalTransactions -> Alert when there are unregistered fiscal transactions for a long time.",
 						"description": "Enumeration for alert notification types.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n"
 					}
 				}
@@ -1436,9 +1585,14 @@
 					"$ref": "#/$defs/timeSpan",
 					"description": "Duration for which the cancel option is displayed.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinOPT`\n",
 					"default": "00:00:30"
+				},
+				"ShowTransactionFinishedDuration": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Duration for which the transaction finished overlay is displayed.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+					"default": "00:00:20"
 				}
 			},
-			"description": "Configuration for automated flow logic.\n \n*Used by apps:* `WinOPT`\n"
+			"description": "Configuration for automated flow logic.\n \n*Used by apps:* `WinOPT`,`WinPOS`\n"
 		},
 		"ConnectedDevices": {
 			"type": "object",
@@ -1940,6 +2094,11 @@
 				"ManualFleetCustomerAndLicencePlate": {
 					"type": "boolean",
 					"description": "Indicates if customer name and licence plate manatory in manual fleet card payment.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+				},
+				"RequestTimeout": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "Request timeout for ECR connector.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": "00:03:00"
 				},
 				"DummyPaymentModule": {
 					"type": "boolean",
@@ -2602,6 +2761,10 @@
 			},
 			"description": "Diebold SM bus cash drawer configuration.\n \n*Used by apps:* `WinPOS`\n"
 		},
+		"timeSpan": {
+			"type": "string",
+			"format": "duration"
+		},
 		"highRiskItemControl": {
 			"enum": [
 				"NoControl",
@@ -2627,10 +2790,6 @@
 			"$comment": "UWP -> Base scenner service.\n \nZebraSDK -> Scanner service for older scanners.\n \nKeyboard -> Service for scanners set to work as keyboard.",
 			"description": "Representing type of BarcodeScenner service.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
 			"default": 0
-		},
-		"timeSpan": {
-			"type": "string",
-			"format": "duration"
 		},
 		"cancellationType": {
 			"enum": [
@@ -2773,6 +2932,16 @@
 					"$ref": "#/$defs/handshake",
 					"description": "Handshake.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
 					"default": 0
+				},
+				"ReadTimeout": {
+					"type": "integer",
+					"description": "Sets the number of milliseconds before a time-out occurs when a read operation does not finish.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 20000
+				},
+				"WriteTimeout": {
+					"type": "integer",
+					"description": "Sets the number of milliseconds before a time-out occurs when a write operation does not finish.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n",
+					"default": 20000
 				}
 			},
 			"description": "Serial port options.\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
