@@ -16,7 +16,7 @@
             "NONE"
           ],
           "description": "Open cash drawer mode.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
-          "default": "3"
+          "default": "OEC"
         }
       }
     },
@@ -187,7 +187,7 @@
             "AskEverytime"
           ],
           "description": "Type of double vat.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Merchant",
-          "default": "1"
+          "default": "Default"
         },
         "IncludePrintout": {
           "type": "boolean",
