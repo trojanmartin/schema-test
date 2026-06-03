@@ -9,12 +9,12 @@
 			"properties": {
 				"NotifyFrom": {
 					"$ref": "#/$defs/timeOnly",
-					"description": "Time of the day indicating when notifications about the manual daily closure requirement should start to be dispatched to clients",
+					"description": "Time of the day indicating when notifications about the manual daily closure requirement should start to be dispatched to clients\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n",
 					"default": "20:00:00"
 				},
 				"NotifyTo": {
 					"$ref": "#/$defs/timeOnly",
-					"description": "Time of the day indicating when notifications about the manual daily closure requirement should stop to be dispatched to clients",
+					"description": "Time of the day indicating when notifications about the manual daily closure requirement should stop to be dispatched to clients\n \n*Recommended config level:* `Location`\n \n*Change type:* `Automatic`\n",
 					"default": "23:59:00"
 				}
 			},
@@ -28,28 +28,28 @@
 			"properties": {
 				"RefreshIntervalSec": {
 					"type": "integer",
-					"description": "Interval for price changes status update in seconds",
+					"description": "Interval for price changes status update in seconds\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 60,
 					"minimum": 1
 				},
 				"MaxPriceDigits": {
 					"type": "integer",
-					"description": "Maximum digits that price can have",
+					"description": "Maximum digits that price can have\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 4
 				},
 				"VisibleBefore": {
 					"$ref": "#/$defs/timeSpan",
-					"description": "The time interval prior to executing a price change at which changes are visible",
+					"description": "The time interval prior to executing a price change at which changes are visible\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": "02:00:00"
 				},
 				"AttemptsToBlockProduct": {
 					"type": "integer",
-					"description": "The number of attempts to apply a price change before considering it 'failed' and blocking authorization for that product. 0 means that no block will be performed.",
+					"description": "The number of attempts to apply a price change before considering it 'failed' and blocking authorization for that product. 0 means that no block will be performed.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 0
 				},
 				"MaxInProgressTime": {
 					"$ref": "#/$defs/timeSpan",
-					"description": "Max amount of time to consider InProgress price change valid, if limit passes price change will be considered failed and system will try to apply it again.",
+					"description": "Max amount of time to consider InProgress price change valid, if limit passes price change will be considered failed and system will try to apply it again.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": "00:10:00"
 				},
 				"BlockedProductEmailOptions": {
@@ -60,35 +60,35 @@
 					"properties": {
 						"Interval": {
 							"$ref": "#/$defs/timeSpan",
-							"description": "Email sending interval: If set to 00:00:00, the email will be sent only once without any repetition.",
+							"description": "Email sending interval: If set to 00:00:00, the email will be sent only once without any repetition.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"default": "01:00:00"
 						},
 						"From": {
 							"type": "string",
-							"description": "Sender email address."
+							"description": "Sender email address.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
 						},
 						"To": {
-							"description": "Email recipients.",
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "#/$defs/listOfString",
+							"description": "Email recipients.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
+				 
+						
+		
 						},
 						"Subject": {
 							"type": "string",
-							"description": "Email subject."
+							"description": "Email subject.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
 						},
 						"Host": {
 							"type": "string",
-							"description": "Server host"
+							"description": "Server host\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
 						},
 						"Port": {
 							"type": "integer",
-							"description": "Email port."
+							"description": "Email port.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
 						},
 						"UseTls": {
 							"type": "boolean",
-							"description": "Flag to use TLS.",
+							"description": "Flag to use TLS.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"default": false
 						},
 						"Username": {
@@ -96,7 +96,7 @@
 								"string",
 								"null"
 							],
-							"description": "Username",
+							"description": "Username\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"default": null
 						},
 						"Password": {
@@ -104,7 +104,7 @@
 								"string",
 								"null"
 							],
-							"description": "Password.",
+							"description": "Password.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"default": null
 						}
 					},
@@ -131,7 +131,7 @@
 							"Password"
 						]
 					},
-					"description": "Options for email notification about product being blocked. If empty no email notification used.",
+					"description": "Options for email notification about product being blocked. If empty no email notification used.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": null
 				}
 			},
@@ -145,91 +145,91 @@
 			"properties": {
 				"TanksRefreshIntervalSeconds": {
 					"type": "integer",
-					"description": "Configures tank data refresh interval. When executed -> tank collect its measurement data (measurement data Volume, Level etc..).",
+					"description": "Configures tank data refresh interval. When executed -> tank collect its measurement data (measurement data Volume, Level etc..).\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 60,
 					"minimum": 1
 				},
 				"TankDataAgeThresholdSeconds": {
 					"type": "integer",
-					"description": "Threshold in seconds that sets maximum age of tank measurement. If measurement is older it is considered as not valid.",
+					"description": "Threshold in seconds that sets maximum age of tank measurement. If measurement is older it is considered as not valid.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 7200,
 					"minimum": 0
 				},
 				"AutoClearZeroTransactions": {
 					"type": "boolean",
-					"description": "Configures if zero transactions should be cleared automatically. Zerro transaction is transaction with 0 quantity/amount.",
+					"description": "Configures if zero transactions should be cleared automatically. Zerro transaction is transaction with 0 quantity/amount.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": true
 				},
 				"SiteControllerLocalDeviceId": {
 					"type": "integer",
-					"description": "Id of siteController on local site, for example used in communication with DOMS as POS identity when automatically lock/clearing transactions.",
+					"description": "Id of siteController on local site, for example used in communication with DOMS as POS identity when automatically lock/clearing transactions.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 60,
 					"minimum": 1,
 					"maximum": 80
 				},
 				"DispenserErrorAlertSec": {
 					"type": "integer",
-					"description": "Time in seconds that if dispenser stays in error state, alert is fired.",
+					"description": "Time in seconds that if dispenser stays in error state, alert is fired.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 30,
 					"minimum": 0
 				},
 				"DispenserTransactionUnpaidAlertSec": {
 					"type": "integer",
-					"description": "Time in seconds that if dispenser transaction stays unpaid, alert is fired.",
+					"description": "Time in seconds that if dispenser transaction stays unpaid, alert is fired.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 120,
 					"minimum": 0
 				},
 				"DispenserTransactionActiveAlertSec": {
 					"type": "integer",
-					"description": "Time in seconds that if dispenser transaction stays as active fuelling, alert is fired.",
+					"description": "Time in seconds that if dispenser transaction stays as active fuelling, alert is fired.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 120,
 					"minimum": 0
 				},
 				"DispenserDelayBetweenResendNotificationsMiliseconds": {
 					"type": "integer",
-					"description": "Time in milliseconds to delay resending configured notifications.",
+					"description": "Time in milliseconds to delay resending configured notifications.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 10000,
 					"minimum": 0
 				},
 				"DispensersPreauthorizationConfiguration": {
-					"description": "Configuration related to dispensers preauthorization.",
+					"description": "Configuration related to dispensers preauthorization.\n \n*Recommended config level:* `Merchant`\n",
 					"type": "object",
 					"properties": {
 						"DefaultPreauthorizationAmountAdjustment": {
 							"$ref": "#/$defs/number",
-							"description": "Default adjustment value for amount based preauthorization.",
+							"description": "Default adjustment value for amount based preauthorization.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"default": 0
 						},
 						"DefaultPreauthorizationVolumeAdjustment": {
 							"$ref": "#/$defs/number",
-							"description": "Default adjustment value for volume based preauthorization.",
+							"description": "Default adjustment value for volume based preauthorization.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"default": 0
 						},
 						"DefaultDispensingAmountLimit": {
 							"$ref": "#/$defs/number",
-							"description": "Default dispensing limit which siteController sets for dispenser with Automatic DispenserAuthorizationType. If 0, no limit is set.",
+							"description": "Default dispensing limit which siteController sets for dispenser with Automatic DispenserAuthorizationType. If 0, no limit is set.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 							"minimum": 0,
 							"default": 0
 						},
 						"DeviceSpecificConfigurations": {
-							"description": "Preauthorization configurations for specific device.",
+							"description": "Preauthorization configurations for specific device.\n \n*Recommended config level:* `Application`\n",
 							"type": "array",
 							"items": {
 								"type": "object",
 								"properties": {
 									"DispenserNumber": {
 										"type": "integer",
-										"description": "Dispenser number.",
+										"description": "Dispenser number.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n",
 										"minimum": 1
 									},
 									"PreauthorizationAmountAdjustment": {
 										"$ref": "#/$defs/number",
-										"description": "Adjustment value for amount based preauthorization.",
+										"description": "Adjustment value for amount based preauthorization.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n",
 										"minimum": 0
 									},
 									"PreauthorizationVolumeAdjustment": {
 										"$ref": "#/$defs/number",
-										"description": "Adjustment value for volume based preauthorization.",
+										"description": "Adjustment value for volume based preauthorization.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n",
 										"minimum": 0
 									}
 								},
@@ -256,7 +256,7 @@
 						"string",
 						"null"
 					],
-					"description": "Configures path and file name for dispenser activity forecourt log. If null no log is created",
+					"description": "Configures path and file name for dispenser activity forecourt log. If null no log is created\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": null
 				},
 				"DispenserTotalizersTechnicalLogFilename": {
@@ -264,7 +264,7 @@
 						"string",
 						"null"
 					],
-					"description": "Configures path and file name for totalizer forecourt log. If null no log is created",
+					"description": "Configures path and file name for totalizer forecourt log. If null no log is created\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": null
 				},
 				"TankMeasurementTechnicalLogFilename": {
@@ -272,22 +272,22 @@
 						"string",
 						"null"
 					],
-					"description": "Configures path and file name for tank measurement forecourt log. If null no log is created",
+					"description": "Configures path and file name for tank measurement forecourt log. If null no log is created\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": null
 				},
 				"DispenserTotalizersTechnicalLogInterval": {
 					"$ref": "#/$defs/timeSpan",
-					"description": "Configures interval for dispenser totalizer forecourt log. DispenserTotalizersTechnicalLogFilename has to be filled for this parameter to function.",
+					"description": "Configures interval for dispenser totalizer forecourt log. DispenserTotalizersTechnicalLogFilename has to be filled for this parameter to function.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": "01:00:00"
 				},
 				"TankMeasurementTechnicalLogInterval": {
 					"$ref": "#/$defs/timeSpan",
-					"description": "Configures interval for tank measurement forecourt log. TankMeasurementTechnicalLogFilename has to be filled for this parameter to function.",
+					"description": "Configures interval for tank measurement forecourt log. TankMeasurementTechnicalLogFilename has to be filled for this parameter to function.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": "01:00:00"
 				},
 				"TechnicalLogRotationInterval": {
 					"$ref": "#/$defs/timeSpan",
-					"description": "Configures interval for dispenser activity forecourt log. DispenserActivityTechnicalLogFilename has to be filled for this parameter to function.",
+					"description": "Configures interval for dispenser activity forecourt log. DispenserActivityTechnicalLogFilename has to be filled for this parameter to function.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": "30.00:00:00"
 				}
 			},
@@ -299,7 +299,7 @@
 			"properties": {
 				"Secret": {
 					"type": "string",
-					"description": "Secret which is used to decrypt _regfile used in registration.",
+					"description": "Secret which is used to decrypt _regfile used in registration.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": ""
 				}
 			},
@@ -315,13 +315,13 @@
 			"properties": {
 				"ExportIntervalMinutes": {
 					"type": "integer",
-					"description": "Configures interval in minutes in which forecourt data are automatically send to platform. Note: after each forecourt data is created sending mechanism is triggered anyway",
+					"description": "Configures interval in minutes in which forecourt data are automatically send to platform. Note: after each forecourt data is created sending mechanism is triggered anyway\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 5,
 					"minimum": 1
 				},
 				"FailedExportRetryDelayMinutes": {
 					"type": "integer",
-					"description": "Configures interval in minutes in which forecourt data which previously failed to be send to plaftorm are automatically resend. Note: after each forecourt data is created resending mechanism is triggered anyway",
+					"description": "Configures interval in minutes in which forecourt data which previously failed to be send to plaftorm are automatically resend. Note: after each forecourt data is created resending mechanism is triggered anyway\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 1,
 					"minimum": 1
 				}
@@ -336,19 +336,19 @@
 			"properties": {
 				"ResendIntervalMinutes": {
 					"type": "integer",
-					"description": "Configures interval in minutes in which failed api calls are automatically resend to platform.",
+					"description": "Configures interval in minutes in which failed api calls are automatically resend to platform.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 5,
 					"minimum": 1
 				},
 				"FailedResendRetryDelayMinutes": {
 					"type": "integer",
-					"description": "Delay in minutes for failed api calls to be resend.",
+					"description": "Delay in minutes for failed api calls to be resend.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 1,
 					"minimum": 0
 				},
 				"MaxAttempts": {
 					"type": "integer",
-					"description": "Max attempts for api call to be resend.",
+					"description": "Max attempts for api call to be resend.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 1,
 					"minimum": 0
 				}
@@ -361,86 +361,109 @@
 			"properties": {
 				"AutoStoreDispenserTransactions": {
 					"type": "boolean",
-					"description": "Switch to automatically store dispenser transactions. Does not work for zero transactions.",
+					"description": "Switch to automatically store dispenser transactions. Does not work for zero transactions.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": true
 				},
 				"AutoStoreZeroTransactions": {
 					"type": "boolean",
-					"description": "Switch to automatically store zero dispenser transactions reported by HW. Meaning 0 quantity/amount. Note: if zero transactions are not allowed on HW (for example DOMS) they wont be reported by HW so SiteController cannot store them",
+					"description": "Switch to automatically store zero dispenser transactions reported by HW. Meaning 0 quantity/amount. Note: if zero transactions are not allowed on HW (for example DOMS) they wont be reported by HW so SiteController cannot store them\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": true
 				},
 				"AutoStoreTankMeasurementsOnAlarm": {
 					"type": "boolean",
-					"description": "Switch to create Informative forecourt inventory whenever alarm on tank is raised.",
+					"description": "Switch to create Informative forecourt inventory whenever alarm on tank is raised.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": true
 				},
 				"AutoNozzleStoreInterval": {
 					"type": "integer",
-					"description": "Interval in minutes to create Periodic forecourt inventory containing nozzle registers. Note: if AutoNozzleStoreInterval and AutoStoreTankMeasurementsInterval are equal -> only one FC inventory will be created containing both types of data.",
+					"description": "Interval in minutes to create Periodic forecourt inventory containing nozzle registers. Note: if AutoNozzleStoreInterval and AutoStoreTankMeasurementsInterval are equal -> only one FC inventory will be created containing both types of data.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 15,
 					"minimum": 1
 				},
 				"AutoStoreTankMeasurementsInterval": {
 					"type": "integer",
-					"description": "Interval in minutes to create Periodic forecourt inventory containing tank measurements. Note: if AutoNozzleStoreInterval and AutoStoreTankMeasurementsInterval are equal -> only one FC inventory will be created containing both types of data.",
+					"description": "Interval in minutes to create Periodic forecourt inventory containing tank measurements. Note: if AutoNozzleStoreInterval and AutoStoreTankMeasurementsInterval are equal -> only one FC inventory will be created containing both types of data.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 15,
 					"minimum": 1
 				},
 				"AutomaticDailyClosureTriggerCron": {
 					"type": "string",
-					"description": "Cron expression which sets when automatic daily closure is executed.",
+					"description": "Cron expression which sets when automatic daily closure is executed.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": "0 59 23 * * ?",
 					"pattern": "^(?:[0-5]?\\d) (?:[0-5]?\\d) (?:[01]?\\d|2[0-3]) (?:[1-9]|[12]\\d|3[01]|\\*|\\?) (?:0?[1-9]|1[0-2]|\\*) (?:[0-7]|\\*|\\?)$"
 				},
+				"AutomaticDailyClosureMissedFireThreshold": {
+					"$ref": "#/$defs/timeSpan",
+					"description": "If the application starts within this threshold after the scheduled daily closure time, the closure job will be triggered immediately with the correct scheduled date.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n"
+				},
 				"DailyClosureMergeMaxRestoreDays": {
 					"type": "integer",
-					"description": "Max days to past for restoration of unmerged daily closures.",
+					"description": "Max days to past for restoration of unmerged daily closures.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": 65,
 					"minimum": 1
 				},
 				"DailyClosureMergeAutoTriggerHours": {
 					"type": "integer",
-					"description": "SC will automatically try to check for unmerged daily closures in set interval specified by this parameter in hours.",
+					"description": "SC will automatically try to check for unmerged daily closures in set interval specified by this parameter in hours.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 2,
 					"minimum": 1
 				},
 				"ForecourtDataCleanupTriggerCron": {
 					"type": "string",
-					"description": "Cron expression which sets when automatic forecourt data removal job should be triggered.",
+					"description": "Cron expression which sets when automatic forecourt data removal job should be triggered.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"default": "0 0 2 1/1 * ? *",
 					"pattern": "^(?:[0-5]?\\d) (?:[0-5]?\\d) (?:[01]?\\d|2[0-3]) (?:(?:[1-9]|[12]\\d|3[01])|\\*|\\?|[1-9]/[1-9]\\d*) (?:0?[1-9]|1[0-2]|\\*) (?:[0-7]|\\*|\\?) (?:\\*|\\d{4})$"
 				},
 				"ForecourtDataRetentionPeriodInDays": {
 					"type": "integer",
-					"description": "Max age in days for forecourt data to be stored in SC, if older data will be removed by ForecourtDataCleanup.",
+					"description": "Max age in days for forecourt data to be stored in SC, if older data will be removed by ForecourtDataCleanup.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"minimum": 1,
 					"default": 30
+				},
+				"ForecourtDataCleunupDeleteRecordsOlderThanDays": {
+					"type": "integer",
+					"description": "Max age in days for retention of records regardless of their status in ForecourtDataCleanup.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
+					"minimum": 1,
+					"default": 365
 				}
 			}
+		},
+		"DispenserTransactionOptions": {
+			"type": [
+				"object",
+				"null"
+			],
+			"properties": {
+				"MopCodesWithReturn": {
+					"$ref": "#/$defs/listOfString",
+					"description": "Mop codes where transaction money is returned.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
+				}
+			},
+			"description": "Configures various behaviours connected to dispenser transactions."
 		},
 		"PlatformSettings": {
 			"description": "Configures various behaviour connected to platform.",
 			"type": "object",
 			"properties": {
 				"KeycloakSettings": {
-					"description": "Keycloak related settings.",
+					"description": "Keycloak related settings.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n",
 					"type": "object",
 					"properties": {
 						"KeycloakHost": {
 							"type": "string",
-							"description": "Keycloak host."
+							"description": "Keycloak host.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n"
 						},
 						"KeycloakClientId": {
 							"type": "string",
-							"description": "Keycloak client id."
+							"description": "Keycloak client id.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n"
 						},
 						"KeycloakClientSecret": {
 							"type": "string",
-							"description": "Keycloak secret."
+							"description": "Keycloak secret.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n"
 						},
 						"KeycloakRealm": {
 							"type": "string",
-							"description": "Keycloak realm."
+							"description": "Keycloak realm.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n"
 						}
 					},
 					"required": [
@@ -452,15 +475,15 @@
 				},
 				"PlatformBaseUrl": {
 					"type": "string",
-					"description": "Platform base url."
+					"description": "Platform base url.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n"
 				},
 				"HttpClientOptions": {
-					"description": "Platform HttpClient options.",
+					"description": "Platform HttpClient options.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n",
 					"type": "object",
 					"properties": {
 						"TimeoutInSeconds": {
 							"type": "integer",
-							"description": "Http client timeout in seconds.",
+							"description": "Http client timeout in seconds.\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Restart`\n",
 							"default": 20,
 							"minimum": 1
 						}
@@ -480,7 +503,7 @@
 			"properties": {
 				"PriceChangeException": {
 					"type": "boolean",
-					"description": "Manually throws exception when trying to apply price change",
+					"description": "Manually throws exception when trying to apply price change\n \n*Recommended config level:* `Appsettings`\n \n*Change type:* `Automatic`\n",
 					"default": false
 				}
 			},
@@ -492,15 +515,21 @@
 		"PlatformSettings",
 		"DebugOptions"
 	],
-	"description": "SiteController configuration",
+	"description": "Describes the configuration for the Windows SiteController\n \n \n \n*Recommended config level* defines the level where parameter is SHOULD be defined.\n \n   - `System`: System level – applies to **all merchants** and the **entire system**.\n \n   - `Merchant`: Merchant level – applies to a **single registered merchant**.\n \n   - `Location`: Location level – applies to **all applications** at a specific location.\n \n   - `Application`: Application level – applies to the **current application only**.\n \n  - `Appsettings`: Appsettings – value is read from **`appsettings.json`**.\n \n \n \n*Change type* defines when changes are applied to the application.\n \n   - `Automatic`: Changes are applied automatically while the application is running.\n \n   - `Restart`: Changes require a **restart of the application** to take effect.\n \n",
 	"$defs": {
 		"timeOnly": {
 			"type": "string",
-			"format": "time"
+			"pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
 		},
 		"timeSpan": {
 			"type": "string",
 			"format": "duration"
+		},
+		"listOfString": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		},
 		"number": {
 			"type": "number"
