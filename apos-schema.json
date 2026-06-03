@@ -9,9 +9,14 @@
       "description": "Cash drawer configuration.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "OpenCashDrawerMode": {
-          "type": "number",
+          "type": "string",
+          "enum": [
+            "OEC",
+            "SUNMI",
+            "NONE"
+          ],
           "description": "Open cash drawer mode.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
-          "default": 3
+          "default": "3"
         }
       }
     },
@@ -164,13 +169,25 @@
       "description": "Sales settings for application.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location",
       "properties": {
         "BankCardMode": {
-          "type": "number",
+          "type": "string",
+          "enum": [
+            "Integrated",
+            "NexgoGSA",
+            "SoftPOS"
+          ],
           "description": "Bank card mode.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Location"
         },
         "DoubleVat": {
-          "type": "number",
+          "type": "string",
+          "enum": [
+            "Default",
+            "Takeaway",
+            "Inhouse",
+            "AskOnce",
+            "AskEverytime"
+          ],
           "description": "Type of double vat.\n\n*Change type:* Automatic\n\n*Used by apps:* APos\n\n*Recommended config level:* Merchant",
-          "default": 1
+          "default": "1"
         },
         "IncludePrintout": {
           "type": "boolean",
