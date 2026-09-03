@@ -168,6 +168,13 @@
 					"type": "integer",
 					"description": "Maximal count of items, that can be added to one sales transaction.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n",
 					"default": 170
+				},
+				"MaxTendersInSalesTransaction": {
+					"type": [
+						"integer",
+						"null"
+					],
+					"description": "Maximal count of tenders, that can be added to one sales transaction.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
 				}
 			},
 			"description": "Sales settings for application.\n \n*Used by apps:* `WinPOS`,`WinSCO`,`WinOPT`\n"
@@ -2174,6 +2181,10 @@
 						"DefaultInvoiceCopies": {
 							"type": "integer",
 							"description": "Default invoice copy count.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						},
+						"PartialInvoiceCancellationForbiden": {
+							"type": "boolean",
+							"description": "Invoice partial cancellation forbiden.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
 						}
 					},
 					"description": "Romanian fiscal options."
@@ -2744,6 +2755,16 @@
 						"type": "string"
 					},
 					"description": "Routex fleet card types.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
+				},
+				"DKVFleetCardTypes": {
+					"type": [
+						"array",
+						"null"
+					],
+					"items": {
+						"type": "string"
+					},
+					"description": "DKV fleet card types.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`,`WinOPT`\n"
 				},
 				"DummyPaymentModule": {
 					"type": "boolean",
