@@ -548,7 +548,7 @@
 		},
 		"timeSpan": {
 			"type": "string",
-			"type": "duration"
+			"format": "duration"
 		},
 		"listOfString": {
 			"type": "array",
