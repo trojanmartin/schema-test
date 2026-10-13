@@ -70,9 +70,6 @@
 						"To": {
 							"$ref": "#/$defs/listOfString",
 							"description": "Email recipients.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n"
-				 
-						
-		
 						},
 						"Subject": {
 							"type": "string",
@@ -392,6 +389,15 @@
 					"default": "0 59 23 * * ?",
 					"pattern": "^(?:[0-5]?\\d) (?:[0-5]?\\d) (?:[01]?\\d|2[0-3]) (?:[1-9]|[12]\\d|3[01]|\\*|\\?) (?:0?[1-9]|1[0-2]|\\*) (?:[0-7]|\\*|\\?)$"
 				},
+				"AutomaticDailyDataClosureTriggerCron": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Cron expression which sets when automatic daily data closure is executed. When not set, the automatic daily data closure is not scheduled.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
+					"default": null,
+					"pattern": "^(?:[0-5]?\\d) (?:[0-5]?\\d) (?:[01]?\\d|2[0-3]) (?:[1-9]|[12]\\d|3[01]|\\*|\\?) (?:0?[1-9]|1[0-2]|\\*) (?:[0-7]|\\*|\\?)$"
+				},
 				"AutomaticDailyClosureMissedFireThreshold": {
 					"$ref": "#/$defs/timeSpan",
 					"description": "If the application starts within this threshold after the scheduled daily closure time, the closure job will be triggered immediately with the correct scheduled date.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n"
@@ -407,6 +413,20 @@
 					"description": "SC will automatically try to check for unmerged daily closures in set interval specified by this parameter in hours.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Restart`\n",
 					"default": 2,
 					"minimum": 1
+				},
+				"CollectForecourtSalesInventoryTypes": {
+					"description": "Inventory types for which forecourt sales (device and manual POS transactions) since last inventory are collected into created forecourt inventory. When empty, collection is never triggered.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
+					"type": "array",
+					"items": {
+						"enum": [
+							"Periodic",
+							"Informative",
+							"DailyClosure",
+							"PriceChanged",
+							"OfficialInventory",
+							"DailyDataClosure"
+						]
+					}
 				},
 				"ForecourtDataCleanupTriggerCron": {
 					"type": "string",
@@ -425,6 +445,11 @@
 					"description": "Max age in days for retention of records regardless of their status in ForecourtDataCleanup.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
 					"minimum": 1,
 					"default": 365
+				},
+				"ExecuteDailyClosureBeforeOfficialInventory": {
+					"type": "boolean",
+					"description": "Switch to automatically create daily closure before official inventory is created. Manual measurements from official inventory request are used for the daily closure. Official inventory snapshot is created with a later timestamp than the daily closure snapshot.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n",
+					"default": false
 				}
 			}
 		},
