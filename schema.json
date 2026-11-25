@@ -2070,100 +2070,10 @@
 						},
 						"VatChangeCheckFrom": {
 							"type": [
-								"object",
+								"string",
 								"null"
 							],
-							"properties": {
-								"DateTime": {
-									"$ref": "#/$defs/dateTime",
-									"readOnly": true
-								},
-								"UtcDateTime": {
-									"$ref": "#/$defs/dateTime",
-									"readOnly": true
-								},
-								"LocalDateTime": {
-									"$ref": "#/$defs/dateTime",
-									"readOnly": true
-								},
-								"Date": {
-									"$ref": "#/$defs/dateTime",
-									"readOnly": true
-								},
-								"Day": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"DayOfWeek": {
-									"readOnly": true,
-									"enum": [
-										"Sunday",
-										"Monday",
-										"Tuesday",
-										"Wednesday",
-										"Thursday",
-										"Friday",
-										"Saturday"
-									],
-									"$comment": "Sunday -> Sunday\n \nMonday -> Monday\n \nTuesday -> Tuesday\n \nWednesday -> Wednesday\n \nThursday -> Thursday\n \nFriday -> Friday\n \nSaturday -> Saturday"
-								},
-								"DayOfYear": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Hour": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Millisecond": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Microsecond": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Nanosecond": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Minute": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Month": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Offset": {
-									"$ref": "#/$defs/timeSpan",
-									"readOnly": true
-								},
-								"TotalOffsetMinutes": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Second": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"Ticks": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"UtcTicks": {
-									"type": "integer",
-									"readOnly": true
-								},
-								"TimeOfDay": {
-									"$ref": "#/$defs/timeSpan",
-									"readOnly": true
-								},
-								"Year": {
-									"type": "integer",
-									"readOnly": true
-								}
-							},
+							"format": "date-time",
 							"description": "VAT change check from.\n \n*Recommended config level:* `Application`\n \n*Change type:* `Restart`\n \n*Used by apps:* `WinPOS`\n"
 						},
 						"DateTimeSynchronizationThreshold": {
@@ -2338,6 +2248,11 @@
 						"EetRegistrationStartDateTime": {
 							"$ref": "#/$defs/dateTimeOffset",
 							"description": "Gets or sets the date and time when EET registration starts.\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n"
+						},
+						"VerificationMode": {
+							"type": "boolean",
+							"description": "Verification mode, if true, messages are not registered overeni=\"true\"\n \n*Recommended config level:* `Merchant`\n \n*Change type:* `Automatic`\n \n*Used by apps:* `WinPOS`\n",
+							"default": false
 						}
 					},
 					"description": "Czech fiscal options."
@@ -3398,100 +3313,6 @@
 			"default": 0
 		},
 		"dateTimeOffset": {
-			"type": "object",
-			"properties": {
-				"DateTime": {
-					"$ref": "#/$defs/dateTime",
-					"readOnly": true
-				},
-				"UtcDateTime": {
-					"$ref": "#/$defs/dateTime",
-					"readOnly": true
-				},
-				"LocalDateTime": {
-					"$ref": "#/$defs/dateTime",
-					"readOnly": true
-				},
-				"Date": {
-					"$ref": "#/$defs/dateTime",
-					"readOnly": true
-				},
-				"Day": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"DayOfWeek": {
-					"readOnly": true,
-					"enum": [
-						"Sunday",
-						"Monday",
-						"Tuesday",
-						"Wednesday",
-						"Thursday",
-						"Friday",
-						"Saturday"
-					],
-					"$comment": "Sunday -> Sunday\n \nMonday -> Monday\n \nTuesday -> Tuesday\n \nWednesday -> Wednesday\n \nThursday -> Thursday\n \nFriday -> Friday\n \nSaturday -> Saturday"
-				},
-				"DayOfYear": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Hour": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Millisecond": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Microsecond": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Nanosecond": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Minute": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Month": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Offset": {
-					"$ref": "#/$defs/timeSpan",
-					"readOnly": true
-				},
-				"TotalOffsetMinutes": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Second": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"Ticks": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"UtcTicks": {
-					"type": "integer",
-					"readOnly": true
-				},
-				"TimeOfDay": {
-					"$ref": "#/$defs/timeSpan",
-					"readOnly": true
-				},
-				"Year": {
-					"type": "integer",
-					"readOnly": true
-				}
-			}
-		},
-		"dateTime": {
 			"type": "string",
 			"format": "date-time"
 		},
